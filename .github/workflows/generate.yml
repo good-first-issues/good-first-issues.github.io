@@ -47,7 +47,7 @@ jobs:
       - name: Show PHP version
         run: php -v
 
-      - name: Create file
+      - name: Generate HTML files
         run: php generate.php
       
       - name: Upload artifact
