@@ -48,7 +48,7 @@ jobs:
         run: php -v
 
       - name: Create file
-        run: php parse.php
+        run: php generate.php
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
