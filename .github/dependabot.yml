@@ -5,22 +5,26 @@
 
 version: 2
 updates:
-    - package-ecosystem: "composer"
-    # Look for a `composer.json` in the `root` directory
+
+  # Maintain dependencies for Composer
+  - package-ecosystem: "composer"
     directory: "/"
     versioning-strategy: increase
     schedule:
-        interval: "monthly"
-
-  # Maintain dependencies for GitHub Actions
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-        interval: "monthly"
+      interval: "monthly"
+    labels:
+      - "dependencies"
 
   # Enable version updates for Docker
   - package-ecosystem: "docker"
     # Look for a `Dockerfile` in the `root` directory
     directory: "/"
+    # Check for updates once a week
     schedule:
-        interval: "monthly"
+      interval: "monthly"
+
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
