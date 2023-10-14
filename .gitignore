@@ -1,7 +1,9 @@
+# IDEs
 .idea
 .vscode
 
+# Composer
 /vendor/
 
-
+# Generated files
 index.html
