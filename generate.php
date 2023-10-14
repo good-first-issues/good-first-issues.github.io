@@ -6,7 +6,9 @@
 // TODO To class + ->run()
 
 
-// Удаляем все файлы (кроме .gitignore) из директории `./data`
+if (!is_dir('lang')) {
+    mkdir('lang');
+}
 
 
 // Read the JSON file
@@ -20,7 +22,9 @@ print_r($json_data);
 
 // TODO Рандомизируем массив с репозиториями
 
-$indexContent= "<h1>Hello!</h1>";
+$indexContent = "<h1>Hello!</h1>";
+
+$repositoriesByLanguage = [];
 
 // Проходимся по всем репозиториям
 foreach ($json_data as $line) {
@@ -54,15 +58,53 @@ foreach ($json_data as $line) {
 
     print_r($repositoryData);
 
-    $indexContent .= '<h2>'.$repositoryData['full_name'].'</h2>';
-    $indexContent .= '<p>'.$repositoryData['description'].'</p>';
+    // Конетент для главной страницы
+    $indexContent .= '<h2>' . $repositoryData['full_name'] . '</h2>';
+    $indexContent .= '<p>' . $repositoryData['description'] . '</p>';
 
+    $repositoriesByLanguage[$repositoryData['language']][] = $repositoryData['full_name'];
 
     // Записываем ищуйки в общий файл
 }
 
 
-
-
 file_put_contents('index.html', $indexContent);
+
+
+foreach ($repositoriesByLanguage as $lang => $repositories) {
+    if (strlen($lang) < 1) {
+        $lang = 'other';
+    }
+
+    print_r('Language: ' . $lang);
+
+    $langFile = 'lang/' . $lang . '.html';
+    if (file_exists($langFile)) {
+        $status = unlink($langFile) ? 'The file ' . $langFile . ' has been deleted' . "\n" : 'Error deleting ' . $langFile . "\n";
+        echo $status;
+    }
+
+
+    // TODO Пишем шапку файла
+    file_put_contents($langFile, '<h1>Lang: ' . $lang . '</h1>' . "\n");
+
+    foreach ($repositories as $repository) {
+        print_r('Repository: ' . $repository."\n");
+
+        $issuesJson = file_get_contents('https://api.github.com/repos/' . $repository . '/issues?state=open&sort=updated&labels=good%20first%20issue', false, $context);
+        $issues = json_decode($issuesJson, true);
+
+        foreach ($issues as $issue) {
+            print_r('Issue #' . $issue['number'] . ' ' . $issue['title'] . "\n");
+
+            $str = '<p>' . $issue['title'] . '</p>';
+            $str .= '<p>' . $issue['html_url'] . '</p>';
+
+            file_put_contents($langFile, $str, FILE_APPEND);
+        }
+
+    }
+
+
+}
 
