@@ -6,8 +6,8 @@
 // TODO To class + ->run()
 
 
-if (!is_dir('pages')) {
-    mkdir('pages');
+if (!is_dir('lang')) {
+    mkdir('lang');
 }
 
 
@@ -78,7 +78,7 @@ foreach ($repositoriesByLanguage as $lang => $repositories) {
 
     print_r('Language: ' . $lang);
 
-    $langFile = 'pages/' . $lang . '.html';
+    $langFile = 'lang/' . $lang . '.html';
     if (file_exists($langFile)) {
         $status = unlink($langFile) ? 'The file ' . $langFile . ' has been deleted' . "\n" : 'Error deleting ' . $langFile . "\n";
         echo $status;
