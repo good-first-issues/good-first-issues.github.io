@@ -1,3 +1,0 @@
-gomzyakov/secretic
-gomzyakov/laravel-blog
-github-profile-achievements/russian
