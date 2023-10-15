@@ -11,16 +11,6 @@ jobs:
     name: Test & Upload coverage.xml to Codecov
     runs-on: ubuntu-latest
 
-    services:
-      mysql:
-        image: mysql:8.1
-        env:
-          MYSQL_ROOT_PASSWORD: password
-          MYSQL_DATABASE: laravel_blog
-        ports:
-          - 3306:3306
-        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -30,21 +20,17 @@ jobs:
         with:
           php-version: 8.2
 
-      - name: Install PHP extensions
-        run: sudo apt-get install -y php-phpdbg
-
-      - name: Check phpdbg version
-        run: phpdbg -V
+      - name: Check PHP Version
+        run: php -v
 
       - name: Install Composer Dependencies
-        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+        run: composer install --no-interaction --prefer-dist
 
       - name: Run tests via PHPUnit
         env:
           XDEBUG_MODE: coverage
         run: |
           vendor/bin/phpunit --coverage-clover=coverage.xml
-          cat ./coverage.xml
 
       - name: Show coverage.xml
         run: cat ./coverage.xml
