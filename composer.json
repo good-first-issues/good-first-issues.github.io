@@ -1,0 +1,41 @@
+{
+  "name": "gomzyakov/good-first-issue",
+  "description": "Make your first open-source contribution.",
+  "type": "project",
+  "license": "MIT",
+  "keywords": [
+    "good-first-issue"
+  ],
+  "homepage": "https://github.com/gomzyakov/good-first-issue",
+  "require": {
+    "php": "^8.2",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.34",
+    "gomzyakov/php-cs-fixer-config": "^1.30",
+    "phpunit/phpunit": "^10.4",
+    "phpstan/phpstan": "^1.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "GoodFirstIssue\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "cs-fix": "@php ./vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php",
+    "cs-check": "@php ./vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --dry-run",
+    "phpstan": "@php ./vendor/bin/phpstan analyze -c ./phpstan.neon.dist --no-progress --ansi",
+    "phpunit": "@php ./vendor/bin/phpunit ./tests --no-coverage --color=always",
+    "test": [
+      "@cs-check",
+      "@phpstan",
+      "@phpunit"
+    ]
+  }
+}
