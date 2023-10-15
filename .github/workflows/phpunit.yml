@@ -31,6 +31,7 @@ jobs:
           XDEBUG_MODE: coverage
         run: |
           vendor/bin/phpunit --coverage-clover=coverage.xml
+          cat ./coverage.xml
 
       - name: Show coverage.xml
         run: cat ./coverage.xml
