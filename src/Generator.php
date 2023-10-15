@@ -73,6 +73,7 @@ readonly class Generator
             // Записываем ищуйки в общий файл
         }
 
+        // TODO сортируем репозитории по updated at
 
         file_put_contents('index.html', $indexContent);
 
