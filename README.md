@@ -1,4 +1,4 @@
-# good-first-issue.com
+# good first issue
 
 Make your first open-source contribution.
 
