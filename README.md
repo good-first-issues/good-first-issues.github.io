@@ -1,4 +1,4 @@
-# good-first-issue.com
+# good first issue
 
 Make your first open-source contribution.
 
@@ -23,3 +23,4 @@ chmod u+x xxx.sh
 https://api.github.com/repos/gomzyakov/good-first-issue/issues?state=open&sort=updated&labels=good%20first%20issue
 
 Ежедневно запускается [cron.yml](#TODO) который _TODO_
+
