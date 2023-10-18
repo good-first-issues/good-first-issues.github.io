@@ -34,7 +34,7 @@ readonly class Renderer
         }
 
         // TODO To prif
-        $mainHTML      = file_get_contents($this->rootPath . '/Templates/main.html');
+        $mainHTML      = file_get_contents($this->rootPath . '/src/Templates/main.html');
         $replace_pairs = [
             '%CARDS%' => $cards_html,
         ];
@@ -46,7 +46,7 @@ readonly class Renderer
 
     private function renderCardHTML(Repository $repository, string $list_items_html): string
     {
-        $main_card_template = file_get_contents($this->rootPath . '/Templates/main_card.html');
+        $main_card_template = file_get_contents($this->rootPath . '/src/Templates/main_card.html');
 
         $replace_pairs = [
             '%REPO_URL%'         => $repository->html_url,
@@ -60,7 +60,7 @@ readonly class Renderer
 
     private function renderCardListItemHTML(Issue $issue): string
     {
-        $mainCardLiTemplate = file_get_contents($this->rootPath . '/Templates/main_card_li.html');
+        $mainCardLiTemplate = file_get_contents($this->rootPath . '/src/Templates/main_card_li.html');
 
         $replace_pairs = [
             '_ISSUE_HREF_'       => $issue->html_url,

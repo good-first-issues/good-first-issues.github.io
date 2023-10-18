@@ -34,11 +34,13 @@ readonly class Generator
         $repositoryJson = file_get_contents('https://api.github.com/repos/' . $repository_name, false, $context);
         $repository     = json_decode($repositoryJson, true);
 
+        $lang = (strlen((string) $repository['language']) < 1) ? 'other' : $repository['language'];
+
         return new Repository(
             $repository['html_url'],
             $repository['full_name'],
             $repository['description'],
-            $repository['language'],
+            $lang,
             $repository['stargazers_count'],
             $repository['open_issues_count'],
             $repository['open_issues'],
