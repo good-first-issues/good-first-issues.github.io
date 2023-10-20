@@ -6,11 +6,12 @@ namespace GoodFirstIssue;
 
 use GoodFirstIssue\DTO\Issue;
 use GoodFirstIssue\DTO\Repository;
+use LogicException;
 
 readonly class Renderer
 {
     public function __construct(
-        private string $rootPath
+        private string $root_path
     ) {
     }
 
@@ -21,7 +22,29 @@ readonly class Renderer
      *
      * @return void
      */
-    public function buildIndexHTML(array $repositories): void
+    public function renderIndexPage(array $repositories): void
+    {
+        $main_html = file_get_contents($template_path = $this->root_path . '/src/Templates/main.html');
+
+        if (! is_string($main_html)) {
+            throw new LogicException('Cannot read file: ' . $template_path);
+        }
+
+        $replace_pairs = [
+            '%CARDS%' => $this->renderCardsListHTML($repositories),
+        ];
+
+        $html = strtr($main_html, $replace_pairs);
+
+        file_put_contents('index.html', $html);
+    }
+
+    /**
+     * @param array<Repository> $repositories
+     *
+     * @return string
+     */
+    private function renderCardsListHTML(array $repositories): string
     {
         $cards_html = '';
         foreach ($repositories as $repository) {
@@ -33,20 +56,16 @@ readonly class Renderer
             $cards_html .= $this->renderCardHTML($repository, $list_items_html);
         }
 
-        // TODO To prif
-        $mainHTML      = file_get_contents($this->rootPath . '/src/Templates/main.html');
-        $replace_pairs = [
-            '%CARDS%' => $cards_html,
-        ];
-
-        $html = strtr($mainHTML, $replace_pairs);
-
-        file_put_contents('index.html', $html);
+        return $cards_html;
     }
 
     private function renderCardHTML(Repository $repository, string $list_items_html): string
     {
-        $main_card_template = file_get_contents($this->rootPath . '/src/Templates/main_card.html');
+        $main_card_template = file_get_contents($template_path = $this->root_path . '/src/Templates/main_card.html');
+
+        if (! is_string($main_card_template)) {
+            throw new LogicException('Cannot read file: ' . $template_path);
+        }
 
         $replace_pairs = [
             '%REPO_URL%'         => $repository->html_url,
@@ -60,7 +79,11 @@ readonly class Renderer
 
     private function renderCardListItemHTML(Issue $issue): string
     {
-        $mainCardLiTemplate = file_get_contents($this->rootPath . '/src/Templates/main_card_li.html');
+        $list_item_template = file_get_contents($template_path = $this->root_path . '/src/Templates/main_card_li.html');
+
+        if (! is_string($list_item_template)) {
+            throw new LogicException('Cannot read file: ' . $template_path);
+        }
 
         $replace_pairs = [
             '_ISSUE_HREF_'       => $issue->html_url,
@@ -68,7 +91,7 @@ readonly class Renderer
             '_ISSUE_UPDATED_AT_' => 'TODO',
         ];
 
-        return strtr($mainCardLiTemplate, $replace_pairs);
+        return strtr($list_item_template, $replace_pairs);
     }
 
     //    public function buildLangs(array $repositories): void
