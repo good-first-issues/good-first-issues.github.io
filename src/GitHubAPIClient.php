@@ -6,6 +6,7 @@ namespace GoodFirstIssue;
 
 use GoodFirstIssue\DTO\Issue;
 use GoodFirstIssue\DTO\Repository;
+use LogicException;
 
 readonly class GitHubAPIClient
 {
@@ -42,8 +43,15 @@ readonly class GitHubAPIClient
     {
         $context = stream_context_create(self::OPTS);
 
-        $repository_json = file_get_contents('https://api.github.com/repos/' . $repository_name, false, $context);
+        $repository_json = file_get_contents($api_route = 'https://api.github.com/repos/' . $repository_name, false, $context);
+        if (! is_string($repository_json)) {
+            throw new LogicException('Cannot read GitHub API response from ' . $api_route);
+        }
+
         $repository      = json_decode($repository_json, true);
+        if (! is_array($repository)) {
+            throw new LogicException('Cannot decode repository data');
+        }
 
         $lang = (strlen((string) $repository['language']) < 1) ? 'other' : $repository['language'];
 
@@ -68,8 +76,15 @@ readonly class GitHubAPIClient
     {
         $context = stream_context_create(self::OPTS);
 
-        $issues_json  = file_get_contents('https://api.github.com/repos/' . $repository_name . '/issues?state=open&sort=updated&labels=good%20first%20issue', false, $context);
+        $issues_json  = file_get_contents($api_route = 'https://api.github.com/repos/' . $repository_name . '/issues?state=open&sort=updated&labels=good%20first%20issue', false, $context);
+        if (! is_string($issues_json)) {
+            throw new LogicException('Cannot read GitHub API response from ' . $api_route);
+        }
+
         $issues_data  = json_decode($issues_json, true);
+        if (! is_array($issues_data)) {
+            throw new LogicException('Cannot decode issues data');
+        }
 
         foreach ($issues_data as $data) {
             print_r('Issue #' . $data['number'] . ' ' . $data['title'] . "\n");

@@ -5,6 +5,12 @@
 # Composer
 /vendor/
 
+# PHPUnit
+.phpunit.cache
+
 # Generated files
 index.html
 lang
+
+# Mac OS
+.DS_Store

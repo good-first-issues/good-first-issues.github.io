@@ -29,7 +29,7 @@ readonly class Generator
 
         $repository_names = json_decode($json, true);
         if (! is_array($repository_names)) {
-            throw new LogicException('Cannot read decode repository names');
+            throw new LogicException('Cannot decode repository names');
         }
 
         print_r($repository_names);
