@@ -47,6 +47,9 @@ jobs:
       - name: Show PHP version
         run: php -v
 
+      - name: Install Composer dependencies
+        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+
       - name: Generate HTML files
         run: php generate.php
       
