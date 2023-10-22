@@ -92,7 +92,7 @@ readonly class Renderer
         $replace_pairs = [
             '_ISSUE_HREF_'       => $issue->html_url,
             '_ISSUE_TITLE_'      => $issue->title,
-            '_ISSUE_UPDATED_AT_' => 'TODO',
+            '_ISSUE_UPDATED_AT_' => Carbon::parse($issue->updated_at)->diffForHumans(),
         ];
 
         return strtr($list_item_template, $replace_pairs);
