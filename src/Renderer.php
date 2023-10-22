@@ -4,6 +4,7 @@ declare(strict_types = 1);
 
 namespace GoodFirstIssue;
 
+use Carbon\Carbon;
 use GoodFirstIssue\DTO\Issue;
 use GoodFirstIssue\DTO\Repository;
 use LogicException;
@@ -68,10 +69,13 @@ readonly class Renderer
         }
 
         $replace_pairs = [
-            '%REPO_URL%'         => $repository->html_url,
-            '%REPO_NAME%'        => $repository->full_name,
-            '%REPO_DESCRIPTION%' => $repository->description,
-            '%ISSUES_LIST_HTML%' => $list_items_html,
+            '%REPO_URL%'           => $repository->html_url,
+            '%REPO_NAME%'          => $repository->full_name,
+            '%REPO_DESCRIPTION%'   => $repository->description,
+            '_REPO_LANG_'          => $repository->language,
+            '_REPO_STARS_'         => $repository->stargazers_count,
+            '_REPO_LAST_ACTIVITY_' => Carbon::parse($repository->updated_at)->diffForHumans(),
+            '%ISSUES_LIST_HTML%'   => $list_items_html,
         ];
 
         return strtr($main_card_template, $replace_pairs);
@@ -93,6 +97,7 @@ readonly class Renderer
 
         return strtr($list_item_template, $replace_pairs);
     }
+
 
     //    public function buildLangs(array $repositories): void
     //    {
