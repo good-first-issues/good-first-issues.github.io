@@ -14,7 +14,7 @@ You're welcome to add a new project in *Good First Issues*, just follow these st
 
 - To maintain the quality of projects in *Good First Issues*, please make sure your GitHub repository meets the following criteria:
 
-    - It has at least three issues with the `good first issue` label. This label is already present on all repositories by default. If not, you can follow the steps [here](https://help.github.com/en/github/managing-your-work-on-github/applying-labels-to-issues-and-pull-requests).
+    - It has at least three issues with the `good first issue` label. This label is already present on all repositories by default.
 
     - It contains a `README.md` with detailed setup instructions for the project
 
