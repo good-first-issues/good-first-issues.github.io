@@ -1,3 +1,5 @@
+![Good First Issues](./assets/github/social-preview.png)
+
 # Good First Issues
 
 **Good First Issues** is an initiative to curate easy pickings from popular projects, so developers who've never contributed to open-source can get started quickly.
