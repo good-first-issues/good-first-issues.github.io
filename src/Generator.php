@@ -37,6 +37,7 @@ readonly class Generator
         $repositories = $this->github_api_client->requestRepositoriesData($repository_names);
 
         // TODO сортируем репозитории по updated at
+        // TODO удаляем неактивные репозитории
 
         foreach ($repositories as $repository) {
             print_r('Get issues for repository: ' . $repository->full_name . "\n");
