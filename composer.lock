@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab47fd40691188282acfb964d9f139f3",
+    "content-hash": "f9767e3256e785f2542bfc06a1b6f58b",
     "packages": [
         {
             "name": "nesbot/carbon",
@@ -881,16 +881,16 @@
         },
         {
             "name": "gomzyakov/php-cs-fixer-config",
-            "version": "v1.35.0",
+            "version": "v1.36.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gomzyakov/php-cs-fixer-config.git",
-                "reference": "f4aeb5adb55650475fbde4a33b9f772f26af677e"
+                "reference": "4cb9fd461334f19fd2ed822a1eced773f338d9e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/f4aeb5adb55650475fbde4a33b9f772f26af677e",
-                "reference": "f4aeb5adb55650475fbde4a33b9f772f26af677e",
+                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/4cb9fd461334f19fd2ed822a1eced773f338d9e7",
+                "reference": "4cb9fd461334f19fd2ed822a1eced773f338d9e7",
                 "shasum": ""
             },
             "require": {
@@ -898,7 +898,7 @@
                 "php": "^7.4 || ^8.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.34",
+                "friendsofphp/php-cs-fixer": "^3.37",
                 "mockery/mockery": "^1.6",
                 "phpstan/phpstan": "^1.10",
                 "phpunit/phpunit": "^10.4"
@@ -928,9 +928,9 @@
             ],
             "support": {
                 "issues": "https://github.com/gomzyakov/php-cs-fixer-config/issues",
-                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.35.0"
+                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.36.0"
             },
-            "time": "2023-10-10T10:23:01+00:00"
+            "time": "2023-10-31T04:08:17+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -3828,5 +3828,5 @@
         "ext-json": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
