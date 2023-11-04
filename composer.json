@@ -9,11 +9,12 @@
   "homepage": "https://github.com/gomzyakov/good-first-issue",
   "require": {
     "php": "^8.2",
-    "ext-json": "*"
+    "ext-json": "*",
+    "nesbot/carbon": "^2.71"
   },
   "require-dev": {
-    "friendsofphp/php-cs-fixer": "^3.34",
-    "gomzyakov/php-cs-fixer-config": "^1.30",
+    "friendsofphp/php-cs-fixer": "^3.37",
+    "gomzyakov/php-cs-fixer-config": "^1.36",
     "phpunit/phpunit": "^10.4",
     "phpstan/phpstan": "^1.10"
   },

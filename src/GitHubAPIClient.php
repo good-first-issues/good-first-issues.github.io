@@ -92,7 +92,8 @@ readonly class GitHubAPIClient
             $issues[] = new Issue(
                 $data['html_url'],
                 $data['title'],
-                $data['number']
+                $data['number'],
+                $data['updated_at']
             );
         }
 
