@@ -6,24 +6,27 @@ namespace GoodFirstIssue;
 
 use GoodFirstIssue\DTO\Issue;
 use GoodFirstIssue\DTO\Repository;
-use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Request;
 use LogicException;
 
 readonly class GitHubAPIClient
 {
-    private const OPTS = [
-        'http' => [
-            'method' => 'GET',
-            'header' => ['User-Agent: PHP'],
-        ],
-    ];
+    /**
+     * @param ClientInterface $client
+     */
+    public function __construct(
+        private ClientInterface $client,
+    ) {
+    }
 
     /**
      * Get information about all repositories.
      *
      * @param array<string> $repository_names
+     *
+     * @throws GuzzleException
      *
      * @return array<Repository>
      */
@@ -40,18 +43,19 @@ readonly class GitHubAPIClient
     /**
      * @param string $repository_name
      *
+     * @throws GuzzleException
+     *
      * @return Repository
      */
     public function requestRepositoryData(string $repository_name): Repository
     {
-        $context = stream_context_create(self::OPTS);
+        $api_route = 'https://api.github.com/repos/' . $repository_name;
+        $request   = new Request('GET', $api_route);
 
-        $repository_json = file_get_contents($api_route = 'https://api.github.com/repos/' . $repository_name, false, $context);
-        if (! is_string($repository_json)) {
-            throw new LogicException('Cannot read GitHub API response from ' . $api_route);
-        }
+        $response        = $this->client->send($request);
+        $repository_json = $response->getBody()->getContents();
 
-        $repository      = json_decode($repository_json, true);
+        $repository = json_decode($repository_json, true);
         if (! is_array($repository)) {
             throw new LogicException('Cannot decode repository data');
         }
@@ -79,31 +83,11 @@ readonly class GitHubAPIClient
      */
     public function requestIssues(string $repository_name): array
     {
-        // TODO Rewrite
-
-        $gh_token = getenv('GITHUB_TOKEN');
-
-        //        if (isset($arg['gh_token'])) {
-        //            $gh_token = $arg['gh_token'];
-        //        } else {
-        if (! is_string($gh_token)) {
-            throw new LogicException('Cannot read GITHUB_TOKEN env-variable');
-        }
-
-        // ---
-
-        $client = new Client(['base_uri' => 'https://api.github.com/']);
-
-        $headers   = ['Authorization' => 'Bearer ' . $gh_token];
         $api_route = 'https://api.github.com/repos/' . $repository_name . '/issues?state=open&sort=updated&labels=good%20first%20issue';
-        $request   = new Request('GET', $api_route, $headers);
+        $request   = new Request('GET', $api_route);
 
-
-        $response = $client->send($request);
-
+        $response    = $this->client->send($request);
         $issues_json = $response->getBody()->getContents();
-
-        // ---
 
         $issues_data  = json_decode($issues_json, true);
         if (! is_array($issues_data)) {
