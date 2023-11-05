@@ -6,6 +6,7 @@ namespace GoodFirstIssue;
 
 use GoodFirstIssue\DTO\Issue;
 use GoodFirstIssue\DTO\Repository;
+use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Request;
 use LogicException;
@@ -88,7 +89,7 @@ readonly class GitHubAPIClient
 
         // ---
 
-        $client = new \GuzzleHttp\Client(['base_uri' => 'https://api.github.com/']);
+        $client = new Client(['base_uri' => 'https://api.github.com/']);
 
         $headers   = ['Authorization' => 'Bearer ' . $gh_token];
         $api_route = 'https://api.github.com/repos/' . $repository_name . '/issues?state=open&sort=updated&labels=good%20first%20issue';
