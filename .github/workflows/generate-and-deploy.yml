@@ -22,6 +22,9 @@ permissions:
   deployments: write
   id-token: write
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
@@ -55,7 +58,7 @@ jobs:
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
       - name: Generate HTML files
-        run: php generate.php gh_token=${{ secrets.GITHUB_TOKEN }}
+        run: php generate.php GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2

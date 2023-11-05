@@ -81,10 +81,13 @@ readonly class GitHubAPIClient
     {
         // TODO Rewrite
 
-        if (isset($arg['gh_token'])) {
-            $gh_token = $arg['gh_token'];
-        } else {
-            throw new LogicException('Cannot read parameter with secret GitHub token not set');
+        $gh_token = getenv('GITHUB_TOKEN');
+
+//        if (isset($arg['gh_token'])) {
+//            $gh_token = $arg['gh_token'];
+//        } else {
+        if (!is_string($gh_token)){
+            throw new LogicException('Cannot read GITHUB_TOKEN env-variable');
         }
 
         // ---
