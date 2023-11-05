@@ -6,6 +6,8 @@ namespace GoodFirstIssue;
 
 use GoodFirstIssue\DTO\Issue;
 use GoodFirstIssue\DTO\Repository;
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Psr7\Request;
 use LogicException;
 
 readonly class GitHubAPIClient
@@ -70,16 +72,34 @@ readonly class GitHubAPIClient
     /**
      * @param string $repository_name
      *
+     * @throws GuzzleException
+     *
      * @return array<Issue>
      */
     public function requestIssues(string $repository_name): array
     {
-        $context = stream_context_create(self::OPTS);
+        // TODO Rewrite
 
-        $issues_json  = file_get_contents($api_route = 'https://api.github.com/repos/' . $repository_name . '/issues?state=open&sort=updated&labels=good%20first%20issue', false, $context);
-        if (! is_string($issues_json)) {
-            throw new LogicException('Cannot read GitHub API response from ' . $api_route);
+        if (isset($arg['gh_token'])) {
+            $gh_token = $arg['gh_token'];
+        } else {
+            throw new LogicException('Cannot read parameter with secret GitHub token not set');
         }
+
+        // ---
+
+        $client = new \GuzzleHttp\Client(['base_uri' => 'https://api.github.com/']);
+
+        $headers   = ['Authorization' => 'Bearer ' . $gh_token];
+        $api_route = 'https://api.github.com/repos/' . $repository_name . '/issues?state=open&sort=updated&labels=good%20first%20issue';
+        $request   = new Request('GET', $api_route, $headers);
+
+
+        $response = $client->send($request);
+
+        $issues_json = $response->getBody()->getContents();
+
+        // ---
 
         $issues_data  = json_decode($issues_json, true);
         if (! is_array($issues_data)) {

@@ -10,7 +10,8 @@
   "require": {
     "php": "^8.2",
     "ext-json": "*",
-    "nesbot/carbon": "^2.71"
+    "nesbot/carbon": "^2.71",
+    "guzzlehttp/guzzle": "^7.8"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.37",
