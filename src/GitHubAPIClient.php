@@ -83,10 +83,10 @@ readonly class GitHubAPIClient
 
         $gh_token = getenv('GITHUB_TOKEN');
 
-//        if (isset($arg['gh_token'])) {
-//            $gh_token = $arg['gh_token'];
-//        } else {
-        if (!is_string($gh_token)){
+        //        if (isset($arg['gh_token'])) {
+        //            $gh_token = $arg['gh_token'];
+        //        } else {
+        if (! is_string($gh_token)) {
             throw new LogicException('Cannot read GITHUB_TOKEN env-variable');
         }
 

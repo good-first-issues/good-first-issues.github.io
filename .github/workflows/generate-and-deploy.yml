@@ -58,7 +58,7 @@ jobs:
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
       - name: Generate HTML files
-        run: php generate.php GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
+        run: php generate.php
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
