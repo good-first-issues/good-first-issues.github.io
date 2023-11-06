@@ -12,14 +12,14 @@ class Repository
     private array $issues = [];
 
     /**
-     * @param string $html_url
-     * @param string $full_name
+     * @param string      $html_url
+     * @param string      $full_name
      * @param string|null $description
-     * @param string $language
-     * @param int $stargazers_count
-     * @param int $open_issues_count
-     * @param int $open_issues
-     * @param string $updated_at
+     * @param string      $language
+     * @param int         $stargazers_count
+     * @param int         $open_issues_count
+     * @param int         $open_issues
+     * @param string      $updated_at
      */
     public function __construct(
         public readonly string $html_url, // Ex: "https://github.com/octocat/Hello-World"
