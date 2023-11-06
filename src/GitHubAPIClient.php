@@ -10,6 +10,7 @@ use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Request;
 use LogicException;
+use Throwable;
 
 readonly class GitHubAPIClient
 {
@@ -26,15 +27,16 @@ readonly class GitHubAPIClient
      *
      * @param array<string> $repository_names
      *
-     * @throws GuzzleException
-     *
      * @return array<Repository>
      */
     public function requestRepositoriesData(array $repository_names): array
     {
         foreach ($repository_names as $repository_name) {
-            $repository     = $this->requestRepositoryData($repository_name);
-            $repositories[] = $repository;
+            $repository = $this->requestRepositoryData($repository_name);
+
+            if ($repository !== null) {
+                $repositories[] = $repository;
+            }
         }
 
         return $repositories ?? [];
@@ -43,19 +45,26 @@ readonly class GitHubAPIClient
     /**
      * @param string $repository_name
      *
-     * @throws GuzzleException
-     *
-     * @return Repository
+     * @return Repository|null
      */
-    public function requestRepositoryData(string $repository_name): Repository
+    public function requestRepositoryData(string $repository_name): ?Repository
     {
         $api_route = 'https://api.github.com/repos/' . $repository_name;
         $request   = new Request('GET', $api_route);
 
-        $response        = $this->client->send($request);
-        $repository_json = $response->getBody()->getContents();
+        try {
+            $response        = $this->client->send($request);
+            $repository_json = $response->getBody()->getContents();
 
-        $repository = json_decode($repository_json, true);
+            $repository = json_decode($repository_json, true);
+        } catch (Throwable $e) {
+            // TODO Can we open an issue with this problem?
+            print_r('Not found repository: ' . $repository_name);
+            print_r($e->getMessage());
+
+            return null;
+        }
+
         if (! is_array($repository)) {
             throw new LogicException('Cannot decode repository data');
         }
