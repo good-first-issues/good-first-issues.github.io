@@ -11,10 +11,20 @@ class Repository
      */
     private array $issues = [];
 
+    /**
+     * @param string $html_url
+     * @param string $full_name
+     * @param string|null $description
+     * @param string $language
+     * @param int $stargazers_count
+     * @param int $open_issues_count
+     * @param int $open_issues
+     * @param string $updated_at
+     */
     public function __construct(
         public readonly string $html_url, // Ex: "https://github.com/octocat/Hello-World"
         public readonly string $full_name,// Ex: "octocat/Hello-World"
-        public readonly string $description, // Ex: "This your first repo!"
+        public readonly ?string $description, // Ex: "This your first repo!"
         public readonly string $language, // Ex: null,
         public readonly int $stargazers_count, // Ex: 80,
         public readonly int $open_issues_count, // Ex: 0,

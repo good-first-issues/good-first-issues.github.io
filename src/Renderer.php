@@ -71,7 +71,7 @@ readonly class Renderer
         $replace_pairs = [
             '%REPO_URL%'           => $repository->html_url,
             '%REPO_NAME%'          => $repository->full_name,
-            '%REPO_DESCRIPTION%'   => $repository->description,
+            '%REPO_DESCRIPTION%'   => $repository->description ?? 'No description',
             '_REPO_LANG_'          => $repository->language,
             '_REPO_STARS_'         => $repository->stargazers_count,
             '_REPO_LAST_ACTIVITY_' => Carbon::parse($repository->updated_at)->diffForHumans(),
