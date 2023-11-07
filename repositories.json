@@ -1,6 +1,8 @@
 [
     "gomzyakov/laravel-blog",
     "gomzyakov/secretic",
+    "gomzyakov/gomzyakov.github.io",
     "github-profile-achievements/english",
-    "github-profile-achievements/russian"
+    "github-profile-achievements/russian",
+    "github-profile-achievements/github-profile-achievements.github.io"
 ]
