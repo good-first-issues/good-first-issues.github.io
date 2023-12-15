@@ -72,48 +72,48 @@
 <kbd>[<img title="Af-soomaali" alt="Somalia" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/so.svg" width="22">](translations/README.so.md)</kbd>
 <kbd>[<img title="Español de Ecuador" alt="Ecuador" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/ec.svg" width="22">](translations/README.ec.md)</kbd>
 
-# Good First Issues
+# Bons primeiros problemas
 
-**Good First Issues** is an initiative to curate easy pickings from popular projects, so developers who've never contributed to open-source can get started quickly.
+**Good First Issues** é uma iniciativa para selecionar escolhas fáceis de projetos populares, para que desenvolvedores que nunca contribuíram com código aberto possam começar rapidamente.
 
-Website: [good-first-issues.github.io](https://good-first-issues.github.io)
+Site: [good-first-issues.github.io](https://good-first-issues.github.io)
 
-This website is primarily targeted at developers who want to contribute to open source software but do not know where or how to start.
+Este site é direcionado principalmente a desenvolvedores que desejam contribuir com software de código aberto, mas não sabem por onde ou como começar.
 
-Open-source maintainers are always looking to get more people involved, but new developers generally think it's challenging to become a contributor. We believe getting developers to fix super-easy issues removes the barrier for future contributions. This is why _Good First Issues_ exists.
+Os mantenedores de código aberto estão sempre procurando envolver mais pessoas, mas os novos desenvolvedores geralmente acham que é um desafio se tornar um contribuidor. Acreditamos que fazer com que os desenvolvedores corrijam problemas superfáceis remove a barreira para futuras contribuições. É por isso que existem _Good First Issues_.
 
-## Adding a new project
+## Adicionando um novo projeto
 
-You're welcome to add a new project in _Good First Issues_, just follow these steps:
+Você pode adicionar um novo projeto em _Good First Issues_, basta seguir estas etapas:
 
-- To maintain the quality of projects in _Good First Issues_, please make sure your GitHub repository meets the following criteria:
+- Para manter a qualidade dos projetos em _Good First Issues_, certifique-se de que seu repositório GitHub atenda aos seguintes critérios:
 
-  - It has at least three issues with the `good first issue` label. This label is already present on all repositories by default.
+  - Possui pelo menos três edições com o rótulo de “boa primeira edição”. Este rótulo já está presente em todos os repositórios por padrão.
 
-  - It contains a `README.md` with detailed setup instructions for the project
+  - Contém um `README.md` com instruções detalhadas de configuração para o projeto
 
-  - It is actively maintained (last update less than 1 month ago)
+  - É mantido ativamente (última atualização há menos de 1 mês)
 
-- Add your repository's path (in the format `owner/name` and lexicographic order) in [repositories.json](https://github.com/gomzyakov/good-first-issue/blob/main/repositories.json).
+- Adicione o caminho do seu repositório (no formato `proprietário/nome` e ordem lexicográfica) em [repositories.json](https://github.com/gomzyakov/good-first-issue/blob/main/repositories.json).
 
-- Create a new pull-request. Please add the link to the issues page of the repository in the PR description. Once the pull request is merged, the changes will be live on [good-first-issues.github.io](https://good-first-issues.github.io).
+- Crie uma nova solicitação pull. Adicione o link para a página de problemas do repositório na descrição do PR. Depois que a solicitação pull for mesclada, as alterações estarão disponíveis em [good-first-issues.github.io](https://good-first-issues.github.io).
 
-## How does it work?
+## Como funciona?
 
-- First _Good First Issues_ is a static website that uses [PHP](https://www.php.net)` to generate HTML files.
-- We use [GitHub REST API](https://docs.github.com/en/rest) to fetch issues from the repositories listed in [repositories.json](https://github.com/gomzyakov/good-first-issue/blob/main/repositories.json).
-- To periodically cycle through issues (twice a day), we use [GitHub Workflow](https://docs.github.com/en/actions/using-workflows).
+- First _Good First Issues_ é um site estático que usa [PHP](https://www.php.net)` para gerar arquivos HTML.
+- Usamos a [API REST do GitHub](https://docs.github.com/en/rest) para buscar problemas dos repositórios listados em [repositories.json](https://github.com/gomzyakov/good-first -issue/blob/main/repositories.json).
+- Para analisar periodicamente os problemas (duas vezes por dia), usamos o [GitHub Workflow](https://docs.github.com/en/actions/using-workflows).
 
-## Help us grow
+## Ajude-nos a crescer
 
-Navigating open-source projects can be quite overwhelming for beginners and experienced contributors alike. _Good First Issues_ looks to solve this problem by providing a platform that serves as a starting point for those looking to get started with open-source or those who are looking to get into a new project.
+Navegar em projetos de código aberto pode ser bastante cansativo tanto para iniciantes quanto para colaboradores experientes. _Good First Issues_ busca resolver esse problema fornecendo uma plataforma que serve como ponto de partida para quem deseja começar com código aberto ou para quem deseja entrar em um novo projeto.
 
-The more people who know about [good-first-issues.github.io](https://good-first-issues.github.io), the better. There are various ways you can help us grow: you could contribute to `awesome` lists, blog about us, reach out to bloggers, tech influences, developer and open-source on Twitter and YouTube, for example. Try and get [good-first-issues.github.io](https://good-first-issues.github.io) mentioned in a video or tweet!
+Quanto mais pessoas souberem sobre [good-first-issues.github.io](https://good-first-issues.github.io), melhor. Existem várias maneiras de nos ajudar a crescer: você pode contribuir para listas “incríveis”, postar sobre nós, entrar em contato com blogueiros, influências tecnológicas, desenvolvedores e código aberto no Twitter e no YouTube, por exemplo. Tente fazer com que [good-first-issues.github.io](https://good-first-issues.github.io) seja mencionado em um vídeo ou tweet!
 
-## Suggestions and wishes
+## Sugestões e desejos
 
-If you have questions or suggestions (or found a bug), you can always write to [issues](https://github.com/good-first-issues/good-first-issues.github.io/issues).
+Se você tiver dúvidas ou sugestões (ou encontrar um bug), você pode escrever para [issues](https://github.com/good-first-issues/good-first-issues.github.io/issues).
 
-## License
+## Licença
 
-This is open-sourced software licensed under the [MIT License](https://github.com/good-first-issues/good-first-issues.github.io/blob/main/LICENSE).
+Este é um software de código aberto licenciado sob a [Licença MIT](https://github.com/good-first-issues/good-first-issues.github.io/blob/main/LICENSE).

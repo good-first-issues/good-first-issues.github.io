@@ -72,48 +72,48 @@
 <kbd>[<img title="Af-soomaali" alt="Somalia" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/so.svg" width="22">](translations/README.so.md)</kbd>
 <kbd>[<img title="Español de Ecuador" alt="Ecuador" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/ec.svg" width="22">](translations/README.ec.md)</kbd>
 
-# Good First Issues
+# Yaxshi birinchi masalalar
 
-**Good First Issues** is an initiative to curate easy pickings from popular projects, so developers who've never contributed to open-source can get started quickly.
+**Good First Issues** mashhur loyihalardan oson tanlovlarni tanlash tashabbusidir, shuning uchun hech qachon ochiq manbaga hissa qo'shmagan dasturchilar tezda ishga kirishishlari mumkin.
 
-Website: [good-first-issues.github.io](https://good-first-issues.github.io)
+Veb-sayt: [good-first-issues.github.io](https://good-first-issues.github.io)
 
-This website is primarily targeted at developers who want to contribute to open source software but do not know where or how to start.
+Ushbu veb-sayt, birinchi navbatda, ochiq kodli dasturiy ta'minotga hissa qo'shmoqchi bo'lgan, lekin qaerdan va qanday boshlashni bilmaydigan ishlab chiquvchilarga mo'ljallangan.
 
-Open-source maintainers are always looking to get more people involved, but new developers generally think it's challenging to become a contributor. We believe getting developers to fix super-easy issues removes the barrier for future contributions. This is why _Good First Issues_ exists.
+Ochiq manbalarni ta'minlovchilar har doim ko'proq odamlarni jalb qilishga intilishadi, ammo yangi ishlab chiquvchilar odatda hissa qo'shuvchi bo'lish qiyin deb o'ylashadi. Ishonamizki, ishlab chiquvchilarni juda oson muammolarni hal qilishlari kelajakdagi hissalar uchun to'siqni olib tashlaydi. Shuning uchun _Good First Issues_ mavjud.
 
-## Adding a new project
+## Yangi loyiha qo'shilmoqda
 
-You're welcome to add a new project in _Good First Issues_, just follow these steps:
+_Good First Issues_-ga yangi loyiha qo'shishingiz mumkin, shunchaki quyidagi amallarni bajaring:
 
-- To maintain the quality of projects in _Good First Issues_, please make sure your GitHub repository meets the following criteria:
+- _Good First Issues_ dagi loyihalar sifatini saqlab qolish uchun GitHub omboringiz quyidagi mezonlarga javob berishiga ishonch hosil qiling:
 
-  - It has at least three issues with the `good first issue` label. This label is already present on all repositories by default.
+  - "Birinchi nashr yaxshi" belgisi bilan kamida uchta muammo bor. Bu yorliq sukut boʻyicha barcha omborlarda allaqachon mavjud.
 
-  - It contains a `README.md` with detailed setup instructions for the project
+  - Unda loyihani sozlash boʻyicha batafsil koʻrsatmalarga ega “README.md” mavjud
 
-  - It is actively maintained (last update less than 1 month ago)
+  - U faol ravishda saqlanmoqda (oxirgi yangilanish 1 oydan kamroq vaqt oldin)
 
-- Add your repository's path (in the format `owner/name` and lexicographic order) in [repositories.json](https://github.com/gomzyakov/good-first-issue/blob/main/repositories.json).
+- [repositories.json](https://github.com/gomzyakov/good-first-issue/blob/main/repositories.json) ga omboringiz yoʻlini (“egasi/ismi” formatida va leksikografik tartibda) qoʻshing.
 
-- Create a new pull-request. Please add the link to the issues page of the repository in the PR description. Once the pull request is merged, the changes will be live on [good-first-issues.github.io](https://good-first-issues.github.io).
+- Yangi tortish so'rovini yarating. Iltimos, havolani PR tavsifida omborning muammolar sahifasiga qo'shing. Olib tashlash soʻrovi birlashtirilgandan soʻng, oʻzgarishlar [good-first-issues.github.io](https://good-first-issues.github.io) da jonli boʻladi.
 
-## How does it work?
+## Bu qanday ishlaydi?
 
-- First _Good First Issues_ is a static website that uses [PHP](https://www.php.net)` to generate HTML files.
-- We use [GitHub REST API](https://docs.github.com/en/rest) to fetch issues from the repositories listed in [repositories.json](https://github.com/gomzyakov/good-first-issue/blob/main/repositories.json).
-- To periodically cycle through issues (twice a day), we use [GitHub Workflow](https://docs.github.com/en/actions/using-workflows).
+- First _Good First Issues_ bu HTML fayllarini yaratish uchun [PHP](https://www.php.net)` dan foydalanadigan statik veb-sayt.
+- Biz [repositories.json](https://github.com/gomzyakov/good-first) roʻyxatidagi omborlardan muammolarni olish uchun [GitHub REST API](https://docs.github.com/en/rest) dan foydalanamiz. -issue/blob/main/repositories.json).
+- Vaqti-vaqti bilan (kuniga ikki marta) muammolarni hal qilish uchun biz [GitHub Workflow] (https://docs.github.com/en/actions/using-workflows) dan foydalanamiz.
 
-## Help us grow
+## O'sishimizga yordam bering
 
-Navigating open-source projects can be quite overwhelming for beginners and experienced contributors alike. _Good First Issues_ looks to solve this problem by providing a platform that serves as a starting point for those looking to get started with open-source or those who are looking to get into a new project.
+Ochiq manbali loyihalarni navigatsiya qilish yangi boshlanuvchilar va tajribali ishtirokchilar uchun juda qiyin bo'lishi mumkin. _Good First Issues_ bu muammoni ochiq manbadan ishga tushmoqchi bo'lganlar yoki yangi loyihaga kirishmoqchi bo'lganlar uchun boshlang'ich nuqta bo'lib xizmat qiladigan platforma taqdim etish orqali hal qilmoqchi.
 
-The more people who know about [good-first-issues.github.io](https://good-first-issues.github.io), the better. There are various ways you can help us grow: you could contribute to `awesome` lists, blog about us, reach out to bloggers, tech influences, developer and open-source on Twitter and YouTube, for example. Try and get [good-first-issues.github.io](https://good-first-issues.github.io) mentioned in a video or tweet!
+[good-first-issues.github.io](https://good-first-issues.github.io) haqida qancha odam bilsa, shuncha yaxshi. Bizning rivojlanishimizga yordam berishning turli usullari mavjud: siz "ajoyib" ro'yxatlarga hissa qo'shishingiz, biz haqimizda blog yozishingiz, bloggerlar bilan bog'lanishingiz, texnologiya ta'siri, ishlab chiquvchi va Twitter va YouTube'da ochiq manbalar bilan bog'lanishingiz mumkin. Sinab ko'ring va video yoki tvitda eslatib o'tilgan [good-first-issues.github.io](https://good-first-issues.github.io) ni oling!
 
-## Suggestions and wishes
+## Takliflar va tilaklar
 
-If you have questions or suggestions (or found a bug), you can always write to [issues](https://github.com/good-first-issues/good-first-issues.github.io/issues).
+Savollaringiz yoki takliflaringiz bo'lsa (yoki xato topsangiz), har doim [issues] (https://github.com/good-first-issues/good-first-issues.github.io/issues) manziliga yozishingiz mumkin.
 
-## License
+## Litsenziya
 
-This is open-sourced software licensed under the [MIT License](https://github.com/good-first-issues/good-first-issues.github.io/blob/main/LICENSE).
+Bu ochiq manbali dasturiy ta'minot [MIT License] (https://github.com/good-first-issues/good-first-issues.github.io/blob/main/LICENSE) ostida litsenziyalangan.

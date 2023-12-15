@@ -72,48 +72,48 @@
 <kbd>[<img title="Af-soomaali" alt="Somalia" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/so.svg" width="22">](translations/README.so.md)</kbd>
 <kbd>[<img title="Español de Ecuador" alt="Ecuador" src="https://cdn.statically.io/gh/hjnilsson/country-flags/master/svg/ec.svg" width="22">](translations/README.ec.md)</kbd>
 
-# Good First Issues
+#अच्छे प्रथम अंक
 
-**Good First Issues** is an initiative to curate easy pickings from popular projects, so developers who've never contributed to open-source can get started quickly.
+**गुड फ़र्स्ट इश्यूज़** लोकप्रिय परियोजनाओं से आसानी से चयन करने की एक पहल है, ताकि जिन डेवलपर्स ने कभी भी ओपन-सोर्स में योगदान नहीं दिया है, वे जल्दी से शुरुआत कर सकें।
 
-Website: [good-first-issues.github.io](https://good-first-issues.github.io)
+वेबसाइट: [good-first-issues.github.io](https://good-first-issues.github.io)
 
-This website is primarily targeted at developers who want to contribute to open source software but do not know where or how to start.
+यह वेबसाइट मुख्य रूप से उन डेवलपर्स पर लक्षित है जो ओपन सोर्स सॉफ़्टवेयर में योगदान देना चाहते हैं लेकिन यह नहीं जानते कि कहां या कैसे शुरू करें।
 
-Open-source maintainers are always looking to get more people involved, but new developers generally think it's challenging to become a contributor. We believe getting developers to fix super-easy issues removes the barrier for future contributions. This is why _Good First Issues_ exists.
+ओपन-सोर्स अनुरक्षक हमेशा अधिक लोगों को शामिल करना चाहते हैं, लेकिन नए डेवलपर्स आमतौर पर सोचते हैं कि योगदानकर्ता बनना चुनौतीपूर्ण है। हमारा मानना ​​है कि डेवलपर्स को बेहद आसान मुद्दों को ठीक करने से भविष्य के योगदान के लिए बाधाएं दूर हो जाती हैं। यही कारण है कि _अच्छे प्रथम अंक_ मौजूद हैं।
 
-## Adding a new project
+## एक नया प्रोजेक्ट जोड़ना
 
-You're welcome to add a new project in _Good First Issues_, just follow these steps:
+_गुड फ़र्स्ट इश्यूज़_ में एक नया प्रोजेक्ट जोड़ने के लिए आपका स्वागत है, बस इन चरणों का पालन करें:
 
-- To maintain the quality of projects in _Good First Issues_, please make sure your GitHub repository meets the following criteria:
+- _गुड फर्स्ट इश्यूज_ में परियोजनाओं की गुणवत्ता बनाए रखने के लिए, कृपया सुनिश्चित करें कि आपका GitHub रिपॉजिटरी निम्नलिखित मानदंडों को पूरा करता है:
 
-  - It has at least three issues with the `good first issue` label. This label is already present on all repositories by default.
+  - इसमें 'अच्छा पहला अंक' लेबल के साथ कम से कम तीन अंक हैं। यह लेबल डिफ़ॉल्ट रूप से सभी रिपॉजिटरी पर पहले से मौजूद है।
 
-  - It contains a `README.md` with detailed setup instructions for the project
+  - इसमें प्रोजेक्ट के लिए विस्तृत सेटअप निर्देशों के साथ `README.md` शामिल है
 
-  - It is actively maintained (last update less than 1 month ago)
+  - इसे सक्रिय रूप से बनाए रखा गया है (अंतिम अपडेट 1 महीने से भी कम समय पहले)
 
-- Add your repository's path (in the format `owner/name` and lexicographic order) in [repositories.json](https://github.com/gomzyakov/good-first-issue/blob/main/repositories.json).
+- [repositories.json](https://github.com/gomzyakov/good-first-issue/blob/main/repositories.json) में अपने रिपॉजिटरी का पथ (प्रारूप 'मालिक/नाम' और लेक्सिकोग्राफ़िक क्रम में) जोड़ें।
 
-- Create a new pull-request. Please add the link to the issues page of the repository in the PR description. Once the pull request is merged, the changes will be live on [good-first-issues.github.io](https://good-first-issues.github.io).
+- एक नया पुल-अनुरोध बनाएं। कृपया पीआर विवरण में रिपॉजिटरी के मुद्दे पृष्ठ पर लिंक जोड़ें। एक बार पुल अनुरोध मर्ज हो जाने पर, परिवर्तन [good-first-issues.github.io](https://good-first-issues.github.io) पर लाइव होंगे।
 
-## How does it work?
+## यह कैसे काम करता है?
 
-- First _Good First Issues_ is a static website that uses [PHP](https://www.php.net)` to generate HTML files.
-- We use [GitHub REST API](https://docs.github.com/en/rest) to fetch issues from the repositories listed in [repositories.json](https://github.com/gomzyakov/good-first-issue/blob/main/repositories.json).
-- To periodically cycle through issues (twice a day), we use [GitHub Workflow](https://docs.github.com/en/actions/using-workflows).
+- फर्स्ट _गुड फर्स्ट इश्यूज_ एक स्थिर वेबसाइट है जो HTML फ़ाइलें उत्पन्न करने के लिए [PHP](https://www.php.net)` का उपयोग करती है।
+- हम [repositories.json](https://github.com/gomzyakov/good-first) में सूचीबद्ध रिपॉजिटरी से मुद्दे लाने के लिए [GitHub REST API](https://docs.github.com/en/rest) का उपयोग करते हैं -इश्यू/ब्लॉब/मेन/रिपॉजिटरीज.जेसन)।
+- समय-समय पर मुद्दों पर विचार करने के लिए (दिन में दो बार), हम [GitHub वर्कफ़्लो](https://docs.github.com/en/actions/using-workflows) का उपयोग करते हैं।
 
-## Help us grow
+## हमें बढ़ने में मदद करें
 
-Navigating open-source projects can be quite overwhelming for beginners and experienced contributors alike. _Good First Issues_ looks to solve this problem by providing a platform that serves as a starting point for those looking to get started with open-source or those who are looking to get into a new project.
+शुरुआती और अनुभवी योगदानकर्ताओं के लिए ओपन-सोर्स परियोजनाओं को नेविगेट करना काफी भारी हो सकता है। _गुड फ़र्स्ट इश्यूज़_ एक ऐसा प्लेटफ़ॉर्म प्रदान करके इस समस्या को हल करना चाहता है जो ओपन-सोर्स के साथ शुरुआत करने वालों या किसी नए प्रोजेक्ट में शामिल होने के इच्छुक लोगों के लिए शुरुआती बिंदु के रूप में कार्य करता है।
 
-The more people who know about [good-first-issues.github.io](https://good-first-issues.github.io), the better. There are various ways you can help us grow: you could contribute to `awesome` lists, blog about us, reach out to bloggers, tech influences, developer and open-source on Twitter and YouTube, for example. Try and get [good-first-issues.github.io](https://good-first-issues.github.io) mentioned in a video or tweet!
+जितने अधिक लोग [good-first-issues.github.io](https://good-first-issues.github.io) के बारे में जानेंगे, उतना बेहतर होगा। ऐसे कई तरीके हैं जिनसे आप हमें आगे बढ़ने में मदद कर सकते हैं: उदाहरण के लिए, आप 'अद्भुत' सूचियों में योगदान कर सकते हैं, हमारे बारे में ब्लॉग कर सकते हैं, ब्लॉगर्स, तकनीकी प्रभावों, डेवलपर और ट्विटर और यूट्यूब पर ओपन-सोर्स तक पहुंच सकते हैं। कोशिश करें और किसी वीडियो या ट्वीट में [good-first-issues.github.io](https://good-first-issues.github.io) का उल्लेख करें!
 
-## Suggestions and wishes
+## सुझाव और शुभकामनाएं
 
-If you have questions or suggestions (or found a bug), you can always write to [issues](https://github.com/good-first-issues/good-first-issues.github.io/issues).
+यदि आपके कोई प्रश्न या सुझाव हैं (या कोई बग मिला है), तो आप हमेशा [issues](https://github.com/good-first-issues/good-first-issues.github.io/issues) पर लिख सकते हैं।
 
-## License
+## लाइसेंस
 
-This is open-sourced software licensed under the [MIT License](https://github.com/good-first-issues/good-first-issues.github.io/blob/main/LICENSE).
+यह [MIT लाइसेंस](https://github.com/good-first-issues/good-first-issues.github.io/blob/main/LICENSE) के तहत लाइसेंस प्राप्त ओपन-सोर्स सॉफ़्टवेयर है।
