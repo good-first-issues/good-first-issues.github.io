@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>404</title>
     <style>
-        * {
+          * {
             margin: 0;
             padding: 0;
             font-family: system-ui, -apple-system, "Segoe UI", Roboto, Oxygen,
@@ -15,19 +15,21 @@
         body {
             background-color: #212529;
             color: #dee2e6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
         }
 
         #wrapper {
             display: flex;
+            flex-direction: column;
             background-color: #212529 !important;
             border: none;
-            width: 80%;
-            height: 90vh;
-            margin: 5vh auto;
-            justify-content: center;
-            align-items: center;
-            vertical-align: middle;
-            border-radius: 25px;
+            width: 60%;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
         #content {
@@ -35,22 +37,31 @@
         }
 
         h1 {
-            font-size: 30vh;
-            line-height: 30vh;
+            font-size: 10vw;
+            line-height: 1.2;
+            color: #f8f9fa; /* Lighter color for the heading */
         }
 
         h2 {
             margin: 2vh 0;
+            color: #adb5bd; /* Slightly lighter color for subheading */
         }
 
-        h2,
         p {
-            color: #a1a8ae;
+            color: #ced4da; /* Lighter color for paragraph text */
+            margin-bottom: 20px;
         }
 
         a {
             color: rgb(110, 168, 254);
+            text-decoration: none;
+            font-weight: bold;
         }
+
+        a:hover {
+            text-decoration: underline; /* Underline on hover */
+        }
+            
     </style>
 </head>
 <body>
@@ -61,5 +72,31 @@
         <p>Sorry, the page you're looking for doesn't exist. Please, go to <a href="/">main page</a>.</p>
     </div>
 </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const heading = document.querySelector('h1');
+
+        if (heading) {
+            // Add a pulsating effect to the heading
+            let scale = 1;
+            let growing = true;
+
+            function updateScale() {
+                if (growing) {
+                    scale += 0.1;
+                    if (scale >= 1.5) growing = false;
+                } else {
+                    scale -= 0.1;
+                    if (scale <= 1) growing = true;
+                }
+
+                heading.style.transform = `scale(${scale})`;
+                requestAnimationFrame(updateScale);
+            }
+
+            updateScale();
+        }
+    });
+    </script>
 </body>
 </html>
