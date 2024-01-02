@@ -58,7 +58,7 @@ jobs:
         run: php generate.php
       
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
           path: '.'
