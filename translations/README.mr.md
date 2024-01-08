@@ -1,4 +1,4 @@
-![गुड फर्स्ट इश्यूज](./assets/github/social-preview.png)
+![गुड फर्स्ट इश्यूज](https://github.com/Krishna01work/good-first-issues.github.io/blob/f5ac4b7f8543913637057e166638f1735512434c/assets/github/social-preview.png)
 
 # चांगले पहिले मुद्दे
 

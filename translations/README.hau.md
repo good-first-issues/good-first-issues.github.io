@@ -1,4 +1,4 @@
-![Batun Farko mai kyau](./assets/github/social-preview.png)
+![Batun Farko mai kyau](https://github.com/Krishna01work/good-first-issues.github.io/blob/f5ac4b7f8543913637057e166638f1735512434c/assets/github/social-preview.png)
 
 # Matsalolin Farko masu kyau
 

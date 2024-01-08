@@ -1,4 +1,4 @@
-![ভাল প্রথম সমস্যা](./assets/github/social-preview.png)
+![ভাল প্রথম সমস্যা](https://github.com/Krishna01work/good-first-issues.github.io/blob/f5ac4b7f8543913637057e166638f1735512434c/assets/github/social-preview.png)
 
 # ভাল প্রথম সমস্যা
 
