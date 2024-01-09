@@ -1,4 +1,4 @@
-![Լավ առաջին խնդիրներ](./assets/github/social-preview.png)
+![Լավ առաջին խնդիրներ](../assets/github/social-preview.png)
 
 # Լավ Առաջին Հարցեր
 

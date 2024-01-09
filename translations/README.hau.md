@@ -1,4 +1,4 @@
-![Batun Farko mai kyau](./assets/github/social-preview.png)
+![Batun Farko mai kyau](../assets/github/social-preview.png)
 
 # Matsalolin Farko masu kyau
 

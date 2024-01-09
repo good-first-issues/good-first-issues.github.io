@@ -1,4 +1,4 @@
-![Çështjet e para të mira](./assets/github/social-preview.png)
+![Çështjet e para të mira](../assets/github/social-preview.png)
 
 # Çështjet e para të mira
 

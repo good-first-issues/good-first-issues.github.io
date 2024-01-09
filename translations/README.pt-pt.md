@@ -1,4 +1,4 @@
-![Boas primeiras questões](./assets/github/social-preview.png)
+![Boas primeiras questões](../assets/github/social-preview.png)
 
 # Bons primeiros problemas
 

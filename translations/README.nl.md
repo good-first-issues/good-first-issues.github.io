@@ -1,4 +1,4 @@
-![Goede eerste problemen](./assets/github/social-preview.png)
+![Goede eerste problemen](../assets/github/social-preview.png)
 
 # Goede eerste nummers
 

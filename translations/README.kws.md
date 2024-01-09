@@ -1,4 +1,4 @@
-![Matoleo Mazuri ya Kwanza](./assets/github/social-preview.png)
+![Matoleo Mazuri ya Kwanza](../assets/github/social-preview.png)
 
 # Masuala mazuri ya kwanza
 

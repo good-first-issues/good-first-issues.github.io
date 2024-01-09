@@ -1,4 +1,4 @@
-![Bon primers problemes](./assets/github/social-preview.png)
+![Bon primers problemes](../assets/github/social-preview.png)
 
 # Bons primers números
 

@@ -1,4 +1,4 @@
-![Buoni primi numeri](./assets/github/social-preview.png)
+![Buoni primi numeri](../assets/github/social-preview.png)
 
 # Buoni primi problemi
 

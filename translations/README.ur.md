@@ -1,4 +1,4 @@
-![گڈ فرسٹ ایشوز](./assets/github/social-preview.png)
+![گڈ فرسٹ ایشوز](../assets/github/social-preview.png)
 
 # اچھے پہلے ایشوز
 

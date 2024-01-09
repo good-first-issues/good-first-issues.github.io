@@ -1,4 +1,4 @@
-![ကောင်းသော ပထမပြဿနာများ]./assets/github/social-preview.png)
+![ကောင်းသော ပထမပြဿနာများ]../assets/github/social-preview.png)
 
 # ကောင်းသော ပထမကိစ္စများ
 

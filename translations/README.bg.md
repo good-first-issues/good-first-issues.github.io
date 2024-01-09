@@ -1,4 +1,4 @@
-![Добри първи издания](./assets/github/social-preview.png)
+![Добри първи издания](../assets/github/social-preview.png)
 
 # Добри първи издания
 

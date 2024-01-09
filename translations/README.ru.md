@@ -1,4 +1,4 @@
-![Хорошие первые выпуски](./assets/github/social-preview.png)
+![Хорошие первые выпуски](../assets/github/social-preview.png)
 
 # Хорошие первые выпуски
 

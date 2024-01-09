@@ -1,4 +1,4 @@
-![गुड फर्स्ट इश्यूज](./assets/github/social-preview.png)
+![गुड फर्स्ट इश्यूज](../assets/github/social-preview.png)
 
 # चांगले पहिले मुद्दे
 

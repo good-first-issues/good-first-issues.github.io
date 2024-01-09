@@ -1,4 +1,4 @@
-﻿![अच्छे प्रथम अंक](./assets/github/social-preview.png)
+﻿![अच्छे प्रथम अंक](../assets/github/social-preview.png)
 
 #अच्छे प्रथम अंक
 

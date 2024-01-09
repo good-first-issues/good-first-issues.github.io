@@ -1,4 +1,4 @@
-![ಒಳ್ಳೆಯ ಮೊದಲ ಸಂಚಿಕೆಗಳು](./assets/github/social-preview.png)
+![ಒಳ್ಳೆಯ ಮೊದಲ ಸಂಚಿಕೆಗಳು](../assets/github/social-preview.png)
 
 # ಉತ್ತಮ ಮೊದಲ ಸಂಚಿಕೆಗಳು
 

@@ -1,4 +1,4 @@
-![좋은 첫 번째 이슈](./assets/github/social-preview.png)
+![좋은 첫 번째 이슈](../assets/github/social-preview.png)
 
 # 좋은 첫 번째 이슈
 

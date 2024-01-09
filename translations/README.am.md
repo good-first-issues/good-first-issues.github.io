@@ -1,4 +1,4 @@
-![ጥሩ የመጀመሪያ ጉዳዮች](./assets/github/social-preview.png)
+![ጥሩ የመጀመሪያ ጉዳዮች](../assets/github/social-preview.png)
 
 # ጥሩ የመጀመሪያ ጉዳዮች
 

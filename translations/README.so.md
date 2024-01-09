@@ -1,4 +1,4 @@
-![Arimaha Koowaad ee Wanaagsan](./assets/github/social-preview.png)
+![Arimaha Koowaad ee Wanaagsan](../assets/github/social-preview.png)
 
 # Arimaha ugu horeeya ee Wanaagsan
 

@@ -1,4 +1,4 @@
-![ਚੰਗੇ ਪਹਿਲੇ ਮੁੱਦੇ](./assets/github/social-preview.png)
+![ਚੰਗੇ ਪਹਿਲੇ ਮੁੱਦੇ](../assets/github/social-preview.png)
 
 # ਚੰਗੇ ਪਹਿਲੇ ਮੁੱਦੇ
 

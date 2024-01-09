@@ -1,4 +1,4 @@
-![राम्रो पहिलो मुद्दाहरू](./assets/github/social-preview.png)
+![राम्रो पहिलो मुद्दाहरू](../assets/github/social-preview.png)
 
 # राम्रो पहिलो मुद्दाहरू
 

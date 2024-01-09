@@ -1,4 +1,4 @@
-![Các vấn đề đầu tiên tốt](./assets/github/social-preview.png)
+![Các vấn đề đầu tiên tốt](../assets/github/social-preview.png)
 
 # Số đầu tiên hay
 

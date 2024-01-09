@@ -1,4 +1,4 @@
-![Жақсы бірінші мәселелер](./assets/github/social-preview.png)
+![Жақсы бірінші мәселелер](../assets/github/social-preview.png)
 
 # Жақсы бірінші мәселелер
 

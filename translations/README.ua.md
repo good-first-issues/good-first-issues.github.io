@@ -1,4 +1,4 @@
-![Гарні перші випуски](./assets/github/social-preview.png)
+![Гарні перші випуски](../assets/github/social-preview.png)
 
 # Гарні перші випуски
 

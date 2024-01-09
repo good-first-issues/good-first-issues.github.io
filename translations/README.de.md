@@ -1,4 +1,4 @@
-![Gute Erstausgaben](./assets/github/social-preview.png)
+![Gute Erstausgaben](../assets/github/social-preview.png)
 
 # Gute Erstausgaben
 

@@ -1,4 +1,4 @@
-![Dobre prve izdaje](./assets/github/social-preview.png)
+![Dobre prve izdaje](../assets/github/social-preview.png)
 
 # Dobre prve številke
 

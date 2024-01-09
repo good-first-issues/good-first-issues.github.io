@@ -1,4 +1,4 @@
-![ښه لومړی مسایل](./assets/github/social-preview.png)
+![ښه لومړی مسایل](../assets/github/social-preview.png)
 
 # ښه لومړی مسایل
 

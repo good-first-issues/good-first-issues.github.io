@@ -1,4 +1,4 @@
-![Materion Cyntaf Da](./assets/github/social-preview.png)
+![Materion Cyntaf Da](../assets/github/social-preview.png)
 
 # Materion Cyntaf Da
 

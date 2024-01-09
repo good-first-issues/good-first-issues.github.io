@@ -1,4 +1,4 @@
-﻿![Dobre pierwsze wydania](./assets/github/social-preview.png)
+﻿![Dobre pierwsze wydania](../assets/github/social-preview.png)
 
 # Dobre pierwsze problemy
 

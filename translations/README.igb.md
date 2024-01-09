@@ -1,4 +1,4 @@
-![Eziokwu Mbụ](./assets/github/social-preview.png)
+![Eziokwu Mbụ](../assets/github/social-preview.png)
 
 # Okwu mbụ dị mma
 

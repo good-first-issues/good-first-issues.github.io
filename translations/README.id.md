@@ -1,4 +1,4 @@
-![Masalah Pertama yang Bagus](./assets/github/social-preview.png)
+![Masalah Pertama yang Bagus](../assets/github/social-preview.png)
 
 # Masalah Pertama yang Baik
 

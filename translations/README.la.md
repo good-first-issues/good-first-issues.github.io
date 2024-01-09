@@ -1,4 +1,4 @@
-![ບັນຫາທຳອິດທີ່ດີ]./assets/github/social-preview.png)
+![ບັນຫາທຳອິດທີ່ດີ]../assets/github/social-preview.png)
 
 # ບັນຫາທໍາອິດທີ່ດີ
 

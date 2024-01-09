@@ -1,4 +1,4 @@
-﻿![ગુડ ફર્સ્ટ ઇશ્યુઝ](./assets/github/social-preview.png)
+﻿![ગુડ ફર્સ્ટ ઇશ્યુઝ](../assets/github/social-preview.png)
 
 # સારા પ્રથમ મુદ્દાઓ
 

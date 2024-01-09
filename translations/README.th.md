@@ -1,4 +1,4 @@
-![ฉบับแรกที่ดี](./assets/github/social-preview.png)
+![ฉบับแรกที่ดี](../assets/github/social-preview.png)
 
 # ประเด็นแรกที่ดี
 

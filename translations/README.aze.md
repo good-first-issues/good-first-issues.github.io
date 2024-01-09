@@ -1,4 +1,4 @@
-![İlk Məsələlər Yaxşı](./assets/github/social-preview.png)
+![İlk Məsələlər Yaxşı](../assets/github/social-preview.png)
 
 # Yaxşı İlk Məsələlər
 

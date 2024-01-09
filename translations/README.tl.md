@@ -1,4 +1,4 @@
-![Magandang Unang Isyu](./assets/github/social-preview.png)
+![Magandang Unang Isyu](../assets/github/social-preview.png)
 
 # Magandang Unang Isyu
 

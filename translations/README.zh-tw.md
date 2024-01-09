@@ -1,4 +1,4 @@
-![好的第一期](./assets/github/social-preview.png)
+![好的第一期](../assets/github/social-preview.png)
 
 # 好的第一期
 

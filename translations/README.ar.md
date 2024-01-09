@@ -1,4 +1,4 @@
-![الأعداد الأولى الجيدة](./assets/github/social-preview.png)
+![الأعداد الأولى الجيدة](../assets/github/social-preview.png)
 
 # القضايا الأولى الجيدة
 

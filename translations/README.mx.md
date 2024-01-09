@@ -1,4 +1,4 @@
-![Buenos primeros números](./assets/github/social-preview.png)
+![Buenos primeros números](../assets/github/social-preview.png)
 
 # Buenos primeros números
 

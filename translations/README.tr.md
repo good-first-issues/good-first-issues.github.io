@@ -1,4 +1,4 @@
-![İlk Sayıların İyisi](./assets/github/social-preview.png)
+![İlk Sayıların İyisi](../assets/github/social-preview.png)
 
 # İyi İlk Sayılar
 

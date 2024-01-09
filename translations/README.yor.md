@@ -1,4 +1,4 @@
-![Awọn ọrọ akọkọ ti o dara](./assets/github/social-preview.png)
+![Awọn ọrọ akọkọ ti o dara](../assets/github/social-preview.png)
 
 # Awọn ọrọ akọkọ ti o dara
 

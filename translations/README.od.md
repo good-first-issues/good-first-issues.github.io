@@ -1,4 +1,4 @@
-! [ଭଲ ପ୍ରଥମ ସମସ୍ୟାଗୁଡିକ] (./ ସମ୍ପତ୍ତି / github / social-preview.png)
+! [ଭଲ ପ୍ରଥମ ସମସ୍ୟାଗୁଡିକ] (../assets/github/social-preview.png)
 
 # ଭଲ ପ୍ରଥମ ସମସ୍ୟାଗୁଡିକ |
 

@@ -1,4 +1,4 @@
-![良い最初の号](./assets/github/social-preview.png)
+![良い最初の号](../assets/github/social-preview.png)
 
 # 良い最初の号
 

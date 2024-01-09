@@ -1,4 +1,4 @@
-![Goeie eerste uitgawes](./assets/github/social-preview.png)
+![Goeie eerste uitgawes](../assets/github/social-preview.png)
 
 # Goeie eerste uitgawes
 

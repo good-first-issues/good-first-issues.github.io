@@ -1,4 +1,4 @@
-![Good First Issues](./assets/github/social-preview.png)
+![Good First Issues](../assets/github/social-preview.png)
 
 # Dobré prvé čísla
 

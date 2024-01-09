@@ -1,4 +1,4 @@
-![Izindaba Ezinhle Zokuqala](./assets/github/social-preview.png)
+![Izindaba Ezinhle Zokuqala](../assets/github/social-preview.png)
 
 #Izindaba Ezinhle Zokuqala
 
