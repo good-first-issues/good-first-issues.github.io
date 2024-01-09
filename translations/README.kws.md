@@ -1,4 +1,4 @@
-![Matoleo Mazuri ya Kwanza](https://github.com/Krishna01work/good-first-issues.github.io/blob/f5ac4b7f8543913637057e166638f1735512434c/assets/github/social-preview.png)
+![Matoleo Mazuri ya Kwanza](../assets/github/social-preview.png)
 
 # Masuala mazuri ya kwanza
 

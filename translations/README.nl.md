@@ -1,4 +1,4 @@
-![Goede eerste problemen](https://github.com/Krishna01work/good-first-issues.github.io/blob/f5ac4b7f8543913637057e166638f1735512434c/assets/github/social-preview.png)
+![Goede eerste problemen](../assets/github/social-preview.png)
 
 # Goede eerste nummers
 

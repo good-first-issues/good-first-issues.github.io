@@ -1,4 +1,4 @@
-![Magandang Unang Isyu](https://github.com/Krishna01work/good-first-issues.github.io/blob/f5ac4b7f8543913637057e166638f1735512434c/assets/github/social-preview.png)
+![Magandang Unang Isyu](../assets/github/social-preview.png)
 
 # Magandang Unang Isyu
 

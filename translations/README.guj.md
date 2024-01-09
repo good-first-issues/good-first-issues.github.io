@@ -1,4 +1,4 @@
-﻿![ગુડ ફર્સ્ટ ઇશ્યુઝ](https://github.com/Krishna01work/good-first-issues.github.io/blob/f5ac4b7f8543913637057e166638f1735512434c/assets/github/social-preview.png)
+﻿![ગુડ ફર્સ્ટ ઇશ્યુઝ](../assets/github/social-preview.png)
 
 # સારા પ્રથમ મુદ્દાઓ
 
