@@ -37,12 +37,12 @@ jobs:
         run: cat ./coverage.xml
 
       - name: Upload coverage.xml to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
           files: ./coverage.xml
-          fail_ci_if_error: false
           flags: unittests
           name: codecov-umbrella
+          fail_ci_if_error: true
           verbose: true
-          env_vars: PHP
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
