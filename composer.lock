@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "426ba4d151248658858146a267ef3c1f",
+    "content-hash": "44519db4d013ad2e3227f3492865147e",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1622,16 +1622,16 @@
         },
         {
             "name": "gomzyakov/php-cs-fixer-config",
-            "version": "v1.41.0",
+            "version": "v1.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gomzyakov/php-cs-fixer-config.git",
-                "reference": "75fdce5076549054e2252a9a77e63407cfc72475"
+                "reference": "ca522696d0b02e80621548a51783e89782bb9536"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/75fdce5076549054e2252a9a77e63407cfc72475",
-                "reference": "75fdce5076549054e2252a9a77e63407cfc72475",
+                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/ca522696d0b02e80621548a51783e89782bb9536",
+                "reference": "ca522696d0b02e80621548a51783e89782bb9536",
                 "shasum": ""
             },
             "require": {
@@ -1639,7 +1639,7 @@
                 "php": "^7.4 || ^8.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.48",
+                "friendsofphp/php-cs-fixer": "^3.50",
                 "mockery/mockery": "^1.6",
                 "phpstan/phpstan": "^1.10",
                 "phpunit/phpunit": "^10.5"
@@ -1669,9 +1669,9 @@
             ],
             "support": {
                 "issues": "https://github.com/gomzyakov/php-cs-fixer-config/issues",
-                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.41.0"
+                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.43.0"
             },
-            "time": "2024-02-01T06:57:49+00:00"
+            "time": "2024-02-27T06:43:06+00:00"
         },
         {
             "name": "myclabs/deep-copy",
