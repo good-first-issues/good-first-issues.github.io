@@ -1,6 +1,6 @@
 [
-    "gomzyakov/laravel-blog",
-    "gomzyakov/secretic",
+    "flamenotes/flamenotes",
+    "larajournal/larajournal",
     "gomzyakov/gomzyakov.github.io",
     "github-profile-achievements/english",
     "github-profile-achievements/russian",
