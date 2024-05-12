@@ -1,3 +1,4 @@
+NOTE: This file has been translated automatically. If you find an error, just make a PR with the edits" to all translation files.
 ![Batun Farko mai kyau](../assets/github/social-preview.png)
 
 # Matsalolin Farko masu kyau
