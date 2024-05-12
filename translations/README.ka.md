@@ -1,3 +1,4 @@
+NOTE: This file has been translated automatically. If you find an error, just make a PR with the edits" to all translation files.
 ![ಒಳ್ಳೆಯ ಮೊದಲ ಸಂಚಿಕೆಗಳು](../assets/github/social-preview.png)
 
 # ಉತ್ತಮ ಮೊದಲ ಸಂಚಿಕೆಗಳು
