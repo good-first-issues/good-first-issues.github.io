@@ -1,4 +1,4 @@
-NOTE: This file has been translated automatically. If you find an error, just make a PR with the edits.
+>**NOTE:* _This file has been translated automatically. If you find an error, just make a PR with the edits._
 
 ![Goeie eerste uitgawes](../assets/github/social-preview.png)
 
