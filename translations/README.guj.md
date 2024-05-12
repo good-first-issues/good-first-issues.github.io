@@ -1,4 +1,5 @@
-﻿![ગુડ ફર્સ્ટ ઇશ્યુઝ](../assets/github/social-preview.png)
+NOTE: This file has been translated automatically. If you find an error, just make a PR with the edits" to all translation files.
+ ![ગુડ ફર્સ્ટ ઇશ્યુઝ](../assets/github/social-preview.png)
 
 # સારા પ્રથમ મુદ્દાઓ
 
