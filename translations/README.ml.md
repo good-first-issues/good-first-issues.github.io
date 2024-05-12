@@ -1,3 +1,4 @@
+NOTE: This file has been translated automatically. If you find an error, just make a PR with the edits" to all translation files.
 ![നല്ല ആദ്യ പ്രശ്നങ്ങൾ](../assets/github/social-preview.png)
 
 # നല്ല ആദ്യ ലക്കങ്ങൾ
