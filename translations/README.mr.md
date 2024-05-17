@@ -1,3 +1,4 @@
+>**NOTE:** _This file has been translated automatically. If you find an error, just make a PR with the edits" to all translation files._
 ![गुड फर्स्ट इश्यूज](../assets/github/social-preview.png)
 
 # चांगले पहिले मुद्दे
