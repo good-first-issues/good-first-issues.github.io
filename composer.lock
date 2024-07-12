@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7ff4fdb077a03b5fc1ceb4f84ee7d78a",
+    "content-hash": "1265bcb3a437f28832ebccf7ae90789e",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1724,27 +1724,27 @@
         },
         {
             "name": "gomzyakov/php-cs-fixer-config",
-            "version": "v1.47.0",
+            "version": "v1.63.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gomzyakov/php-cs-fixer-config.git",
-                "reference": "bcdbc89eb0baacd620f33ef99d586dd4dd95cde8"
+                "reference": "f7c093bf1ba36deeea3e6d5b8da7b6449674c43e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/bcdbc89eb0baacd620f33ef99d586dd4dd95cde8",
-                "reference": "bcdbc89eb0baacd620f33ef99d586dd4dd95cde8",
+                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/f7c093bf1ba36deeea3e6d5b8da7b6449674c43e",
+                "reference": "f7c093bf1ba36deeea3e6d5b8da7b6449674c43e",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "php": "^7.4 || ^8.0"
+                "php": "^8.3"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.53",
+                "friendsofphp/php-cs-fixer": "^3.59",
                 "mockery/mockery": "^1.6",
-                "phpstan/phpstan": "^1.10",
-                "phpunit/phpunit": "^10.5"
+                "phpstan/phpstan": "^1.11",
+                "phpunit/phpunit": "^11.2"
             },
             "type": "package",
             "autoload": {
@@ -1771,9 +1771,9 @@
             ],
             "support": {
                 "issues": "https://github.com/gomzyakov/php-cs-fixer-config/issues",
-                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.47.0"
+                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.63.0"
             },
-            "time": "2024-04-10T06:18:08+00:00"
+            "time": "2024-07-09T10:41:19+00:00"
         },
         {
             "name": "myclabs/deep-copy",
