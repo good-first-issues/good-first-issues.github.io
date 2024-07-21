@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dfe73d4603165fcf1b243cb5b9224b01",
+    "content-hash": "26be758e09b0897cd17a20d298b2df2d",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -402,16 +402,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "3.6.0",
+            "version": "3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "39c8ef752db6865717cc3fba63970c16f057982c"
+                "reference": "cb4374784c87d0a0294e8513a52eb63c0aff3139"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/39c8ef752db6865717cc3fba63970c16f057982c",
-                "reference": "39c8ef752db6865717cc3fba63970c16f057982c",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/cb4374784c87d0a0294e8513a52eb63c0aff3139",
+                "reference": "cb4374784c87d0a0294e8513a52eb63c0aff3139",
                 "shasum": ""
             },
             "require": {
@@ -504,7 +504,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-20T15:52:59+00:00"
+            "time": "2024-07-16T22:29:20+00:00"
         },
         {
             "name": "psr/clock",
