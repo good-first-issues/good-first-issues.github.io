@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ddf66c7d5eed81333e63066687947410",
+    "content-hash": "3471f250f76bf00f1ea58d68d1879c58",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1732,16 +1732,16 @@
         },
         {
             "name": "gomzyakov/php-cs-fixer-config",
-            "version": "v1.65.0",
+            "version": "v1.67.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gomzyakov/php-cs-fixer-config.git",
-                "reference": "6ed839a6657b0f1c76e216c22f63d4e1054ddeb8"
+                "reference": "e35fd2aaeef615c9563bd0b6092f4a6ab6b021ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/6ed839a6657b0f1c76e216c22f63d4e1054ddeb8",
-                "reference": "6ed839a6657b0f1c76e216c22f63d4e1054ddeb8",
+                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/e35fd2aaeef615c9563bd0b6092f4a6ab6b021ce",
+                "reference": "e35fd2aaeef615c9563bd0b6092f4a6ab6b021ce",
                 "shasum": ""
             },
             "require": {
@@ -1779,9 +1779,9 @@
             ],
             "support": {
                 "issues": "https://github.com/gomzyakov/php-cs-fixer-config/issues",
-                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.65.0"
+                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.67.0"
             },
-            "time": "2024-07-21T10:33:19+00:00"
+            "time": "2024-08-02T04:02:17+00:00"
         },
         {
             "name": "myclabs/deep-copy",

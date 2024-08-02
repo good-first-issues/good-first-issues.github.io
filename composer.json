@@ -15,7 +15,7 @@
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^3.61",
-    "gomzyakov/php-cs-fixer-config": "^1.65",
+    "gomzyakov/php-cs-fixer-config": "^1.67",
     "phpunit/phpunit": "^11.3",
     "phpstan/phpstan": "^1.11"
   },
