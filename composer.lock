@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2eb88283192ec011f4433759ac7c7cb9",
+    "content-hash": "e41e186ec12aa9615314c4d112d411e2",
     "packages": [
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1724,16 +1724,16 @@
         },
         {
             "name": "gomzyakov/php-cs-fixer-config",
-            "version": "v1.65.0",
+            "version": "v1.66.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gomzyakov/php-cs-fixer-config.git",
-                "reference": "6ed839a6657b0f1c76e216c22f63d4e1054ddeb8"
+                "reference": "772c306385ce67dd7246cb69262791400a095d97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/6ed839a6657b0f1c76e216c22f63d4e1054ddeb8",
-                "reference": "6ed839a6657b0f1c76e216c22f63d4e1054ddeb8",
+                "url": "https://api.github.com/repos/gomzyakov/php-cs-fixer-config/zipball/772c306385ce67dd7246cb69262791400a095d97",
+                "reference": "772c306385ce67dd7246cb69262791400a095d97",
                 "shasum": ""
             },
             "require": {
@@ -1771,9 +1771,9 @@
             ],
             "support": {
                 "issues": "https://github.com/gomzyakov/php-cs-fixer-config/issues",
-                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.65.0"
+                "source": "https://github.com/gomzyakov/php-cs-fixer-config/tree/v1.66.0"
             },
-            "time": "2024-07-21T10:33:19+00:00"
+            "time": "2024-07-26T04:55:22+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -5288,7 +5288,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.2",
+        "php": "^8.3",
         "ext-json": "*"
     },
     "platform-dev": [],
