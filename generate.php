@@ -16,6 +16,9 @@ $clients_config = [
 $gh_token = getenv('GITHUB_TOKEN');
 if (is_string($gh_token)) {
     $clients_config['headers'] = ['Authorization' => 'Bearer ' . $gh_token];
+    print_r('Success: ENV-variable GITHUB_TOKEN was set.' . PHP_EOL );
+} else {
+    print_r('Warning: ENV-variable GITHUB_TOKEN not found.' . PHP_EOL);
 }
 
 // Init Guzzle client with headers
