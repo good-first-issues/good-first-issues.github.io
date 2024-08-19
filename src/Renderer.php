@@ -7,6 +7,7 @@ namespace GoodFirstIssue;
 use Carbon\Carbon;
 use GoodFirstIssue\DTO\Issue;
 use LogicException;
+use Throwable;
 
 readonly class Renderer
 {
@@ -59,7 +60,7 @@ readonly class Renderer
 
     private function renderIssueHTML(Issue $issue, string $repository_language): string
     {
-        $main_card_template = file_get_contents($template_path = $this->root_path . '/src/Templates/main_card.html');
+        $main_card_template = file_get_contents($template_path = $this->root_path . '/src/Templates/issue_card.html');
 
         if (! is_string($main_card_template)) {
             throw new LogicException('Cannot read file: ' . $template_path);
@@ -68,14 +69,37 @@ readonly class Renderer
         $replace_pairs = [
             '_ISSUE_HREF_'       => $issue->html_url,
             '_ISSUE_TITLE_'      => $issue->title,
+            '_ISSUE_COMMENTS_'   => $issue->comments,
             '_ISSUE_UPDATED_AT_' => Carbon::parse($issue->updated_at)->diffForHumans(),
+            '_USER_AVATAR_URL_'  => $issue->user_avatar_url,
             '_REPO_LANG_'        => $repository_language,
-            '_UPDATED_AT_'       => Carbon::parse($issue->updated_at)->diffForHumans(),
+            '_REPO_NAME_'        => $this->extractRepositoryFullname($issue->html_url),
         ];
 
         return strtr($main_card_template, $replace_pairs);
     }
 
+    /**
+     * Convert `https://github.com/gomzyakov/php-cs-fixer-config/issues/189` to `gomzyakov/php-cs-fixer-config`.
+     *
+     * @param string $issue_html_url
+     *
+     * @return string
+     */
+    private function extractRepositoryFullname(string $issue_html_url): string
+    {
+        try {
+            $string = parse_url($issue_html_url, PHP_URL_PATH);
+            $string = trim($string, '/');
+            $array  = explode('/', $string);
+
+            $repository_fullname = $array[0] . '/' . $array[1];
+        } catch (Throwable $exception) {
+            $repository_fullname = 'unknown';
+        }
+
+        return $repository_fullname;
+    }
 
     // TODO
     //    public function buildLangs(array $repositories): void

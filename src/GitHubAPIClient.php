@@ -49,6 +49,8 @@ readonly class GitHubAPIClient
                 $item['html_url'],
                 $item['title'],
                 $item['number'],
+                $item['comments'],
+                $item['user']['avatar_url'],
                 $item['updated_at']
             );
         }
