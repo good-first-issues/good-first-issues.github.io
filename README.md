@@ -83,6 +83,107 @@ This website is primarily targeted at developers who want to contribute to open 
 
 Open-source maintainers are always looking to get more people involved, but new developers generally think it's challenging to become a contributor. We believe getting developers to fix super-easy issues removes the barrier for future contributions. This is why *Good First Issues* exists.
 
+```bash
+curl -L \
+  -H "Accept: application/vnd.github+json" \
+  -H "X-GitHub-Api-Version: 2022-11-28" \
+  "https://api.github.com/search/issues?q=label:\"good+first+issue\"+language:php+state:open+no:assignee&sort=updated&order=desc&per_page=50&page=1"
+```
+
+Will return JSON-array with information about issues:
+
+```json
+[
+  {
+    "url": "https://api.github.com/repos/symfony/ux/issues/1480",
+    "repository_url": "https://api.github.com/repos/symfony/ux",
+    "labels_url": "https://api.github.com/repos/symfony/ux/issues/1480/labels{/name}",
+    "comments_url": "https://api.github.com/repos/symfony/ux/issues/1480/comments",
+    "events_url": "https://api.github.com/repos/symfony/ux/issues/1480/events",
+    "html_url": "https://github.com/symfony/ux/issues/1480",
+    "id": 2125792255,
+    "node_id": "I_kwDOEuCKh85-tQP_",
+    "number": 1480,
+    "title": "[UX Dropzone] drag'n'drop replacement fail",
+    "user": {
+      "login": "3PSY0N",
+      "id": 78256817,
+      "node_id": "MDQ6VXNlcjc4MjU2ODE3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78256817?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/3PSY0N",
+      "html_url": "https://github.com/3PSY0N",
+      "followers_url": "https://api.github.com/users/3PSY0N/followers",
+      "following_url": "https://api.github.com/users/3PSY0N/following{/other_user}",
+      "gists_url": "https://api.github.com/users/3PSY0N/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/3PSY0N/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/3PSY0N/subscriptions",
+      "organizations_url": "https://api.github.com/users/3PSY0N/orgs",
+      "repos_url": "https://api.github.com/users/3PSY0N/repos",
+      "events_url": "https://api.github.com/users/3PSY0N/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/3PSY0N/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "labels": [
+      {
+        "id": 2540405642,
+        "node_id": "MDU6TGFiZWwyNTQwNDA1NjQy",
+        "url": "https://api.github.com/repos/symfony/ux/labels/good%20first%20issue",
+        "name": "good first issue",
+        "color": "7057ff",
+        "default": true,
+        "description": "Good for newcomers"
+      },
+      {
+        "id": 6831689208,
+        "node_id": "LA_kwDOEuCKh88AAAABlzNN-A",
+        "url": "https://api.github.com/repos/symfony/ux/labels/Dropzone",
+        "name": "Dropzone",
+        "color": "dddddd",
+        "default": false,
+        "description": ""
+      }
+    ],
+    "state": "open",
+    "locked": false,
+    "assignee": null,
+    "assignees": [
+
+    ],
+    "milestone": null,
+    "comments": 5,
+    "created_at": "2024-02-08T18:08:55Z",
+    "updated_at": "2024-08-13T11:29:17Z",
+    "closed_at": null,
+    "author_association": "NONE",
+    "active_lock_reason": null,
+    "body": "Hello,\r\n\r\nWith symfony ux dropzone, you can drag and drop files to add them to the dropzone.\r\nOnce a file is in the zone (file A), if you want to replace it with another file (file B), drag'n'drop doesn't work: file A isn't replaced in the dropzone by file B.\r\nAnd file B opens in a new browser tab.\r\n\r\nIs this a known problem? How can I solve it, please?\r\n\r\n\r\nThanks\r\n\r\n![uxdropzone](https://github.com/symfony/ux/assets/78256817/f9ea1728-4f4b-4287-bcb9-22063b0b47d7)\r\n",
+    "reactions": {
+      "url": "https://api.github.com/repos/symfony/ux/issues/1480/reactions",
+      "total_count": 0,
+      "+1": 0,
+      "-1": 0,
+      "laugh": 0,
+      "hooray": 0,
+      "confused": 0,
+      "heart": 0,
+      "rocket": 0,
+      "eyes": 0
+    },
+    "timeline_url": "https://api.github.com/repos/symfony/ux/issues/1480/timeline",
+    "performed_via_github_app": null,
+    "state_reason": null,
+    "score": 1.0
+  },
+  {
+    
+  }
+]
+
+```
+
+
 ## Adding a new project
 
 You're welcome to add a new project in *Good First Issues*, just follow these steps:

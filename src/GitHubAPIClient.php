@@ -29,7 +29,7 @@ readonly class GitHubAPIClient
         $api_route = 'https://api.github.com/search/issues?q=label:"good+first+issue"'
             . '+state:open+no:assignee'
             . '+language:php' // TODO
-            . '&sort=updated&order=desc&per_page=50'
+            . '&sort=updated&order=desc&per_page=5' // TODO 5 -> 50
             . '&page=1'; // TODO
 
         $request   = new Request('GET', $api_route);
@@ -42,14 +42,14 @@ readonly class GitHubAPIClient
             throw new LogicException('Cannot decode issues data');
         }
 
-        foreach ($issues_data as $data) {
-            print_r('Issue #' . $data['number'] . ' ' . $data['title'] . "\n");
+        foreach ($issues_data['items'] as $item) {
+            print_r('Issue #' . $item['number'] . ' ' . $item['title'] . PHP_EOL);
 
             $issues[] = new Issue(
-                $data['html_url'],
-                $data['title'],
-                $data['number'],
-                $data['updated_at']
+                $item['html_url'],
+                $item['title'],
+                $item['number'],
+                $item['updated_at']
             );
         }
 
