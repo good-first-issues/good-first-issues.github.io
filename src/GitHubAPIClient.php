@@ -5,112 +5,56 @@ declare(strict_types = 1);
 namespace GoodFirstIssue;
 
 use GoodFirstIssue\DTO\Issue;
-use GoodFirstIssue\DTO\Repository;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Request;
 use LogicException;
-use Throwable;
 
 readonly class GitHubAPIClient
 {
-    /**
-     * @param ClientInterface $client
-     */
     public function __construct(
         private ClientInterface $client,
     ) {
     }
 
     /**
-     * Get information about all repositories.
-     *
-     * @param array<string> $repository_names
-     *
-     * @return array<Repository>
-     */
-    public function requestRepositoriesData(array $repository_names): array
-    {
-        foreach ($repository_names as $repository_name) {
-            $repository = $this->requestRepositoryData($repository_name);
-
-            if ($repository !== null) {
-                $repositories[] = $repository;
-            }
-        }
-
-        return $repositories ?? [];
-    }
-
-    /**
-     * @param string $repository_name
-     *
-     * @return Repository|null
-     */
-    public function requestRepositoryData(string $repository_name): ?Repository
-    {
-        $api_route = 'https://api.github.com/repos/' . $repository_name;
-        $request   = new Request('GET', $api_route);
-
-        try {
-            $response        = $this->client->send($request);
-            $repository_json = $response->getBody()->getContents();
-
-            $repository = json_decode($repository_json, true);
-        } catch (Throwable $e) {
-            // TODO Can we open an issue with this problem?
-            print_r('Not found repository: ' . $repository_name);
-            print_r($e->getMessage());
-
-            return null;
-        }
-
-        if (! is_array($repository)) {
-            throw new LogicException('Cannot decode repository data');
-        }
-
-        $lang = (strlen((string) $repository['language']) < 1) ? 'other' : $repository['language'];
-
-        return new Repository(
-            $repository['html_url'],
-            $repository['full_name'],
-            $repository['description'],
-            $lang,
-            $repository['stargazers_count'],
-            $repository['open_issues_count'],
-            $repository['open_issues'],
-            $repository['updated_at'],
-        );
-    }
-
-    /**
-     * @param string $repository_name
+     * Search issues with "good firts issue" tag.
      *
      * @throws GuzzleException
      *
      * @return array<Issue>
      */
-    public function requestIssues(string $repository_name): array
+    public function searchIssuesWithGoodFirtsIssueTag(?string $programming_language = null): array
     {
-        $api_route = 'https://api.github.com/repos/' . $repository_name . '/issues?state=open&sort=updated&labels=good%20first%20issue';
-        $request   = new Request('GET', $api_route);
+        $query_url = 'https://api.github.com/search/issues?q=label:"good+first+issue"+state:open+no:assignee';
+
+        if ($programming_language !== null) {
+            $query_url .= '+language:' . urlencode($programming_language);
+        }
+
+        $query_url .= '&sort=updated&order=desc&per_page=50'
+            . '&page=1'; // TODO
+
+        $request = new Request('GET', $query_url);
 
         $response    = $this->client->send($request);
         $issues_json = $response->getBody()->getContents();
 
-        $issues_data  = json_decode($issues_json, true);
+        $issues_data = json_decode($issues_json, true);
         if (! is_array($issues_data)) {
             throw new LogicException('Cannot decode issues data');
         }
 
-        foreach ($issues_data as $data) {
-            print_r('Issue #' . $data['number'] . ' ' . $data['title'] . "\n");
+        foreach ($issues_data['items'] as $item) {
+            print_r('Issue #' . $item['number'] . ' ' . $item['title'] . PHP_EOL);
 
             $issues[] = new Issue(
-                $data['html_url'],
-                $data['title'],
-                $data['number'],
-                $data['updated_at']
+                $item['html_url'],
+                $item['title'],
+                $item['number'],
+                $item['comments'],
+                $item['user']['avatar_url'],
+                $item['updated_at']
             );
         }
 
