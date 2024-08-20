@@ -75,13 +75,17 @@
 
 # Good First Issues
 
-**Good First Issues** is an initiative to curate easy pickings from popular projects, so developers who've never contributed to open-source can get started quickly.
+**Good First Issues** helps you make your first contribution to open-source. Developers who've never contributed to open-source can get started quickly.
 
 Website: [good-first-issues.github.io](https://good-first-issues.github.io)
 
 This website is primarily targeted at developers who want to contribute to open source software but do not know where or how to start.
 
 Open-source maintainers are always looking to get more people involved, but new developers generally think it's challenging to become a contributor. We believe getting developers to fix super-easy issues removes the barrier for future contributions. This is why *Good First Issues* exists.
+
+## How it works?
+
+App send the request to GutHub API for each programming language:
 
 ```bash
 curl -L \
@@ -90,7 +94,7 @@ curl -L \
   "https://api.github.com/search/issues?q=label:\"good+first+issue\"+language:php+state:open+no:assignee&sort=updated&order=desc&per_page=50&page=1"
 ```
 
-Will return JSON-array with information about issues:
+And get the response with JSON-array with information about issues:
 
 ```json
 [
@@ -180,31 +184,11 @@ Will return JSON-array with information about issues:
     
   }
 ]
-
 ```
 
+After that, we just render a couple of static HTML pages.
 
-## Adding a new project
-
-You're welcome to add a new project in *Good First Issues*, just follow these steps:
-
-- To maintain the quality of projects in *Good First Issues*, please make sure your GitHub repository meets the following criteria:
-
-    - It has at least three issues with the `good first issue` label. This label is already present on all repositories by default.
-
-    - It contains a `README.md` with detailed setup instructions for the project
-
-    - It is actively maintained (last update less than 1 month ago)
-
-- Add your repository's path (in the format `owner/name` and lexicographic order) in [repositories.json](https://github.com/gomzyakov/good-first-issue/blob/main/repositories.json).
-
-- Create a new pull-request. Please add the link to the issues page of the repository in the PR description. Once the pull request is merged, the changes will be live on [good-first-issues.github.io](https://good-first-issues.github.io).
-
-## How does it work?
-
-- First *Good First Issues* is a static website that uses [PHP](https://www.php.net)` to generate HTML files. 
-- We use [GitHub REST API](https://docs.github.com/en/rest) to fetch issues from the repositories listed in [repositories.json](https://github.com/gomzyakov/good-first-issue/blob/main/repositories.json).
-- To periodically cycle through issues (twice a day), we use [GitHub Workflow](https://docs.github.com/en/actions/using-workflows).
+To periodically cycle through issues (twice a day), we use [GitHub Workflow](https://docs.github.com/en/actions/using-workflows).
 
 ## Help us grow
 
