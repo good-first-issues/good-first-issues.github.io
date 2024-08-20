@@ -52,6 +52,9 @@ jobs:
       - name: Show PHP version
         run: php -v
 
+      - name: TODO Temporary ignoring environment requirements
+        run: export PHP_CS_FIXER_IGNORE_ENV=1
+
       - name: Install Composer dependencies
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
