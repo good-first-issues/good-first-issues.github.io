@@ -24,20 +24,23 @@ readonly class GitHubAPIClient
      *
      * @return array<Issue>
      */
-    public function searchIssuesWithGoodFirtsIssueTag(?string $prog_lamguage = null): array
+    public function searchIssuesWithGoodFirtsIssueTag(?string $programming_language = null): array
     {
-        $api_route = 'https://api.github.com/search/issues?q=label:"good+first+issue"'
-            . '+state:open+no:assignee'
-            . '+language:php' // TODO
-            . '&sort=updated&order=desc&per_page=5' // TODO 5 -> 50
+        $query_url = 'https://api.github.com/search/issues?q=label:"good+first+issue"+state:open+no:assignee';
+
+        if ($programming_language !== null) {
+            $query_url .= '+language:' . urlencode($programming_language);
+        }
+
+        $query_url .= '&sort=updated&order=desc&per_page=50'
             . '&page=1'; // TODO
 
-        $request   = new Request('GET', $api_route);
+        $request = new Request('GET', $query_url);
 
         $response    = $this->client->send($request);
         $issues_json = $response->getBody()->getContents();
 
-        $issues_data  = json_decode($issues_json, true);
+        $issues_data = json_decode($issues_json, true);
         if (! is_array($issues_data)) {
             throw new LogicException('Cannot decode issues data');
         }

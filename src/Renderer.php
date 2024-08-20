@@ -6,6 +6,7 @@ namespace GoodFirstIssue;
 
 use Carbon\Carbon;
 use GoodFirstIssue\DTO\Issue;
+use GoodFirstIssue\References\ProgrammingLanguage;
 use LogicException;
 use Throwable;
 
@@ -17,15 +18,14 @@ readonly class Renderer
     }
 
     /**
-     * Build HTML-page.
+     * Build a HTML-page.
      *
-     * @param array<Issue> $issues
-     * @param string       $page_name
-     * @param string       $repository_language
+     * @param array<Issue>        $issues
+     * @param ProgrammingLanguage $language
      *
      * @return void
      */
-    public function renderPage(array $issues, string $page_name, string $repository_language): void
+    public function renderPage(array $issues, ProgrammingLanguage $language): void
     {
         $main_html = file_get_contents($template_path = $this->root_path . '/src/Templates/main.html');
 
@@ -34,12 +34,18 @@ readonly class Renderer
         }
 
         $replace_pairs = [
-            '%CARDS%' => $this->renderIssuesListHTML($issues, $repository_language),
+            '%CARDS%' => $this->renderIssuesListHTML($issues, $language->value),
         ];
 
         $html = strtr($main_html, $replace_pairs);
 
-        file_put_contents($page_name . '.html', $html);
+        if ($language === ProgrammingLanguage::PHP) {
+            $filename = 'index.html';
+        } else {
+            $filename = $this->root_path . '/lang/' . $language->name . '.html';
+        }
+
+        file_put_contents($filename, $html);
     }
 
     /**
@@ -89,7 +95,7 @@ readonly class Renderer
     private function extractRepositoryFullname(string $issue_html_url): string
     {
         try {
-            $string = parse_url($issue_html_url, PHP_URL_PATH);
+            $string = (string) parse_url($issue_html_url, PHP_URL_PATH);
             $string = trim($string, '/');
             $array  = explode('/', $string);
 

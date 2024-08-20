@@ -4,6 +4,7 @@ declare(strict_types = 1);
 
 namespace GoodFirstIssue;
 
+use GoodFirstIssue\References\ProgrammingLanguage;
 use GuzzleHttp\Exception\GuzzleException;
 
 readonly class Generator
@@ -25,15 +26,13 @@ readonly class Generator
             mkdir($this->root_path . '/lang');
         }
 
-        // TODO
-        //        foreach ($prog_lamguages as $prog_lamguage) {
-        $issues = $this->github_api_client->searchIssuesWithGoodFirtsIssueTag();
-        print_r('Issues count: ' . count($issues) . PHP_EOL);
-        //        }
+        // Generate HTML-page with issues for each proramming language
+        foreach (ProgrammingLanguage::cases() as $language) {
+            $issues = $this->github_api_client->searchIssuesWithGoodFirtsIssueTag($language->value);
+            print_r($language->name . ' issues count: ' . count($issues) . PHP_EOL);
 
-
-
-        $renderer = new Renderer($this->root_path);
-        $renderer->renderPage($issues, 'index', 'php'); // TODO
+            $renderer = new Renderer($this->root_path);
+            $renderer->renderPage($issues, $language);
+        }
     }
 }
