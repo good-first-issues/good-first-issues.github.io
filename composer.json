@@ -8,7 +8,7 @@
   ],
   "homepage": "https://github.com/gomzyakov/good-first-issue",
   "require": {
-    "php": "^8.4",
+    "php": "^8.3",
     "ext-json": "*",
     "nesbot/carbon": "^3.7",
     "guzzlehttp/guzzle": "^7.9"
