@@ -6,9 +6,9 @@ namespace GoodFirstIssue\References;
 
 enum ProgrammingLanguage: string
 {
-    case PHP             = 'PHP';
-    case Python          = 'Python';
-    case JavaScript      = 'JavaScript';
+    case PHP = 'PHP';
+    // case Python          = 'Python';
+    // case JavaScript      = 'JavaScript';
     //    case Java            = 'Java';
     //    case HTML            = 'HTML';
     //    case JupyterNotebook = 'Jupyter Notebook';
@@ -16,6 +16,6 @@ enum ProgrammingLanguage: string
     //    case CSharp          = 'C#';
     //    case CPlusPlus       = 'C++';
     //    case CSS             = 'CSS';
-    case Go              = 'Go';
+    // case Go              = 'Go';
     //    case Ruby            = 'Ruby';
 }
