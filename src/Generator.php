@@ -26,16 +26,18 @@ readonly class Generator
             mkdir($this->root_path . '/lang');
         }
 
+        // todo
+        $language = ProgrammingLanguage::PHP;
         // Generate HTML-page with issues for each proramming language
-        foreach (ProgrammingLanguage::cases() as $language) {
-            $issues = $this->github_api_client->searchIssuesWithGoodFirtsIssueTag($language->value);
-            print_r(PHP_EOL);
-            print_r($language->name . ' issues count: ' . count($issues) . PHP_EOL);
+        // foreach (ProgrammingLanguage::cases() as $language) {
+        $issues = $this->github_api_client->searchIssuesWithGoodFirtsIssueTag($language->value);
+        print_r(PHP_EOL);
+        print_r($language->name . ' issues count: ' . count($issues) . PHP_EOL);
 
-            $renderer = new Renderer($this->root_path);
-            $renderer->renderPage($issues, $language);
+        $renderer = new Renderer($this->root_path);
+        $renderer->renderPage($issues, $language);
 
-            sleep(2);
-        }
+        sleep(2);
+        // }
     }
 }
