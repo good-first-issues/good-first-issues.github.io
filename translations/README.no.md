@@ -1,7 +1,7 @@
 >**NOTE:** _This file has been translated automatically. If you find an error, just make a PR with the edits" to all translation files._
 ![Good First Issues](../assets/github/social-preview.png)
 
-# Gode første utgaver
+# Gode første problemer
 
 **Good First Issues** er et initiativ for å samle enkle valg fra populære prosjekter, slik at utviklere som aldri har bidratt til åpen kildekode kan komme raskt i gang.
 
@@ -15,22 +15,22 @@ Denne nettsiden er først og fremst rettet mot utviklere som ønsker å bidra ti
 
 Du er velkommen til å legge til et nytt prosjekt i *Good First Issues*, bare følg disse trinnene:
 
-- For å opprettholde kvaliteten på prosjekter i *Good First Issues*, sørg for at GitHub-depotet ditt oppfyller følgende kriterier:
+- For å opprettholde kvaliteten på prosjekter i *Good First Issues*, sørg for at GitHub-kolleksjon ditt oppfyller følgende kriterier:
 
-     - Den har minst tre utgaver med etiketten `good first issue`. Denne etiketten er allerede til stede på alle repositories som standard.
+     - Den har minst tre problemer med etiketten `good first issue`. Denne etiketten er allerede til stede på alle repositories som standard.
 
      - Den inneholder en `README.md` med detaljerte oppsettinstruksjoner for prosjektet
 
      - Det vedlikeholdes aktivt (siste oppdatering for mindre enn 1 måned siden)
 
-- Legg til depotets bane (i formatet `eier/navn` og leksikografisk rekkefølge) i [repositories.json](https://github.com/gomzyakov/good-first-issue/blob/main/repositories.json).
+- Legg til kolleksjons bane (i formatet `eier/navn` og leksikografisk rekkefølge) i [repositories.json](https://github.com/gomzyakov/good-first-issue/blob/main/repositories.json).
 
-- Opprett en ny pull-forespørsel. Vennligst legg til lenken til problemsiden til depotet i PR-beskrivelsen. Når pull-forespørselen er slått sammen, vil endringene være live på [good-first-issues.github.io](https://good-first-issues.github.io).
+- Opprett en ny pull-forespørsel. Vennligst legg til lenken til problemsiden til kolleksjon i PR-beskrivelsen. Når pull-forespørselen er slått sammen, vil endringene være live på [good-first-issues.github.io](https://good-first-issues.github.io).
 
 ## Hvordan virker det?
 
 - First *Good First Issues* er et statisk nettsted som bruker [PHP](https://www.php.net)` for å generere HTML-filer.
-– Vi bruker [GitHub REST API](https://docs.github.com/en/rest) for å hente problemer fra depotene som er oppført i [repositories.json](https://github.com/gomzyakov/good-first -issue/blob/main/repositories.json).
+– Vi bruker [GitHub REST API](https://docs.github.com/en/rest) for å hente problemer fra kolleksjoner som er oppført i [repositories.json](https://github.com/gomzyakov/good-first -issue/blob/main/repositories.json).
 - For å periodisk gå gjennom problemer (to ganger om dagen), bruker vi [GitHub Workflow](https://docs.github.com/en/actions/using-workflows).
 
 ## Hjelp oss å vokse
