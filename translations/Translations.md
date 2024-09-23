@@ -29,8 +29,8 @@
 | Lietuvių kalba           | [Lietuvių kalba](README.lt.md)                |
 | 한국어                   | [한국어](README.ko.md)                        |
 | Deutsch                  | [Deutsch](README.de.md)                       |
-| 中文(Simplified)         | [中文(Simplified)](README.zh-cn.md)           |
-| 中文(Traditional)        | [中文(Traditional)](README.zh-tw.md)          |
+| 简体中文         | [中文(Simplified)](README.zh-cn.md)           |
+| 繁体中文        | [中文(Traditional)](README.zh-tw.md)          |
 | ελληνικά                 | [ελληνικά](README.gr.md)                      |
 | العربية                  | [العربية](README.ar.md)                       |
 | Українська               | [Українська](README.ua.md)                    |
