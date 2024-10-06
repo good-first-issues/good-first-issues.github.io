@@ -1,3 +1,6 @@
+> [!WARNING]
+> The project is no longer supported. If you have any questions, you can easily contact me [@gomzyakov](https://github.com/gomzyakov).
+
 ![Good First Issues](./assets/github/social-preview.png)
 
 #### Read this in [other languages](translations/Translations.md):
