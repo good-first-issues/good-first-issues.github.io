@@ -1,4 +1,4 @@
-FROM php:8.3.11-alpine
+FROM php:8.3.12-alpine
 
 ENV COMPOSER_HOME="/tmp/composer"
 
